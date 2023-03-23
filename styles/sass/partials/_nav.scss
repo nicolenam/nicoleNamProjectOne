@@ -53,8 +53,10 @@ nav{
 }
 
 .hero-banner {
-    background: url(./../../../assets/home.jpg) no-repeat;
-    background-size: 100%;
-    min-height: 100vh;
+    min-width: 800px;
+
+    img {
+        width: 100%;
+    }
 }
 

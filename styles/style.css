@@ -330,9 +330,10 @@ nav ul li a:hover {
 }
 
 .hero-banner {
-  background: url(./../../../assets/home.jpg) no-repeat;
-  background-size: 100%;
-  min-height: 100vh;
+  min-width: 800px;
+}
+.hero-banner img {
+  width: 100%;
 }
 
 html {
