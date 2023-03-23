@@ -329,13 +329,6 @@ nav ul li a:hover {
   font-size: 0.5rem;
 }
 
-.hero-banner {
-  min-width: 800px;
-}
-.hero-banner img {
-  width: 100%;
-}
-
 html {
   font-size: 125%;
 }
@@ -349,4 +342,11 @@ body {
 a {
   text-decoration: none;
   color: #333;
+}
+
+.hero-banner {
+  background: url(./../../../assets/home.jpg) no-repeat 70% bottom;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
 }
