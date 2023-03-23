@@ -339,6 +339,18 @@ body {
   background-color: #fff;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -351,5 +363,23 @@ a {
   width: 100%;
 }
 .hero-banner .hero-content {
-  width: 30%;
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 12rem;
+}
+.hero-banner .hero-content p {
+  padding-top: 0.5rem;
 }
