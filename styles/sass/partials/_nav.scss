@@ -1,18 +1,60 @@
 @use "./mixin" as m;
+@use "./variables" as v;
 
 nav{
-    @include m.wrapper;
+    @include m.nav-wrapper;
 
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 20px;
+    font-size: .7rem;
+    background-color: #fff;
+
+    .logo {
+        img{
+            width: 100px;
+        }
+    }
 
     ul{
         display: flex;
         list-style-type: none;
         text-transform: uppercase;
         text-decoration: none;
-       
+   
+
+        li {
+            padding: 0 20px;
+
+            a{
+                border-bottom: 1px solid #fff;
+
+                &:hover{
+                    border-bottom: 1px solid v.$primary-color;
+                    width: 50%;
+                }
+            }
+
+        }
     }
+}
+
+.cart {
+    position: relative;
+
+    p{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: .5rem;
+    }
+ 
+}
+
+.hero-banner {
+    background: url(./../../../assets/home.jpg) no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
 }
 
