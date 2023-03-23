@@ -16,4 +16,10 @@ nav ul {
   display: flex;
   list-style-type: none;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
