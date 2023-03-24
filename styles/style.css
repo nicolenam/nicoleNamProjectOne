@@ -312,11 +312,23 @@ nav ul li {
   padding: 0 20px;
 }
 nav ul li a {
-  border-bottom: 1px solid #fff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
 }
-nav ul li a:hover {
-  border-bottom: 1px solid #333;
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
   width: 50%;
+  background-color: #333;
 }
 
 .cart {
@@ -544,5 +556,6 @@ a {
   font-size: 0.7rem;
   padding: 15px 30px;
   margin-bottom: 5rem;
+  cursor: pointer;
   text-align: center;
 }

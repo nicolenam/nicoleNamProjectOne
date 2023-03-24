@@ -27,12 +27,25 @@ nav{
         li {
             padding: 0 20px;
 
-            a{
-                border-bottom: 1px solid #fff;
+            a {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 5px;
 
-                &:hover{
-                    border-bottom: 1px solid v.$color-primary;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0;
+                    transition: width
+                    .3s ease-in-out;
+                }
+
+                &:hover::after{
                     width: 50%;
+                    background-color: v.$color-primary;
                 }
             }
 
