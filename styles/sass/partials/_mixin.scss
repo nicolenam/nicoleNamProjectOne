@@ -1,6 +1,6 @@
 @use './variables' as v;
 
-//CONTAINERS
+//LAYOUTS
 
 @mixin nav-wrapper{
     max-width: v.$width-max;
@@ -11,6 +11,11 @@
 @mixin main-wrapper{
     max-width: 70%;
     margin: 5rem auto;
+}
+
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 @mixin grid-wrapper{

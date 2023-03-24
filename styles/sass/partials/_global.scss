@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "./mixin" as m;
 
 html{
     font-size: 125%;
@@ -14,6 +15,11 @@ h1{
     font-weight: v.$headings-reg;
     font-size: 2rem;
     line-height: 1.2;
+}
+
+h2{
+    @include m.section-heading;
+
 }
 
 p{

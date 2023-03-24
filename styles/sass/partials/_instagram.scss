@@ -1,0 +1,42 @@
+@use "./mixin" as m;
+@use "./variables" as v;
+
+.instagram-section {
+  @include m.main-wrapper;
+  text-align: center;
+
+  p{
+    color: v.$color-secondary;
+    opacity: .6;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 20px;
+    padding-top: 3rem;
+
+    li {
+        width: 20%;
+        overflow: hidden;
+
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      transition: transform .2s ease-in-out;
+
+
+        &:hover{
+            transform: scale(1.1); 
+            cursor: pointer;
+        }
+    }
+  }
+}
