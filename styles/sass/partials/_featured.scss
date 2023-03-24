@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.featured-section{
+    text-align: center;
+
+    h2{
+        @include m.section-heading;
+        
+    }
+
+    .border {
+        border-bottom: 2px solid v.$color-primary;
+        padding-bottom: .5rem;
+        display: inline-block;
+        width: 60px;
+    }
+    
+}
+
+// GRID STARTS HERE 
+

@@ -1,11 +1,22 @@
+@use './variables' as v;
+
+//CONTAINERS
+
 @mixin nav-wrapper{
-    max-width: 1440px;
+    max-width: v.$width-max;
     width: 90%;
     margin: 0 auto;
 }
 
 @mixin main-wrapper{
-    max-width: 1440px;
-    width: 70%;
+    max-width: v.$width-max;
+    width: 80%;
     margin: 0 auto;
+}
+
+//TYPOGRAPHY
+
+@mixin section-heading {
+    font-weight: v.$headings-reg;
+    font-size: 2rem;
 }
