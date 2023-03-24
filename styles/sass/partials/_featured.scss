@@ -17,10 +17,10 @@
       width: 3rem;
       height: 3px;
       bottom: -20px;
-      // will position the left edge of the pseudo-element at the center of the h2 element. However, this will only horizontally center the left edge of the pseudo-element, not its entire width.
       left: 50%;
+      // will position the left edge of the pseudo-element at the center of the h2 element
+      transform: translateX(-50%); 
       // will translate the element horizontally by 50% of its own width towards the left
-      transform: translateX(-50%);
     }
     
   }

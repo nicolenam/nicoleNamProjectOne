@@ -578,9 +578,51 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  text-align: center;
+  position: relative;
 }
 .sales-section .sofa-collection {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+}
+.sales-section .sales-detail {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 70px;
+  min-width: 200px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.sales-section .sales-detail p {
+  text-transform: uppercase;
+}
+.sales-section .sales-detail p:nth-child(1) {
+  background: #fff;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  color: #d7b89c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.sales-section .sales-detail p:nth-child(2) {
+  font-weight: 700;
+  color: #fff;
+  font-size: 2rem;
+}
+.sales-section .shop-now {
+  font-size: 0.8rem;
+  color: #fff;
 }

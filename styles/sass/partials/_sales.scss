@@ -8,19 +8,62 @@
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    // color: #fff;
+    
 
     img {
         height: 450px;
         width: 100%;
         object-fit: cover;
+
     }
 
     .fifty-off{
         flex-grow: 1;
+
+        text-align: center;
+        position: relative;
     }
 
     .sofa-collection{
         flex-grow: 2;
+    }
+
+    .sales-detail{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 70px;
+        min-width: 200px;
+        height: 150px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        p {
+            text-transform: uppercase;
+
+            &:nth-child(1){
+                background: #fff;
+                padding: 0 20px;
+                font-size: .8rem;
+                color: #d7b89c;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            &:nth-child(2){
+                font-weight: v.$body-bold;
+                color: #fff;
+                font-size: 2rem;
+            }
+        }
+
+    }
+    .shop-now{
+        font-size: .8rem;
+        color: #fff;
     }
 
 }
