@@ -1,0 +1,28 @@
+@use "./mixin" as m;
+@use "./variables" as v;
+
+.sales-section{
+    @include m.main-wrapper;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .fifty-off{
+        flex-grow: 1;
+    }
+
+    .sofa-collection{
+        flex-grow: 2;
+    }
+
+}
+
+

@@ -2,8 +2,8 @@
 @use "mixin" as m;
 
 .featured-section {
+
   text-align: center;
-  margin: 2rem;
 
 
   h2 {
@@ -15,21 +15,18 @@
     border-bottom: 2px solid v.$color-primary;
     padding-bottom: 0.5rem;
     display: inline-block;
-    width: 60px;
   }
 }
 
 // GRID STARTS HERE
 
 .grid {
-  @include m.main-wrapper;
+  @include m.grid-wrapper;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   row-gap: 10px;
   column-gap: 10px;
-  margin: 3rem auto;
-  width: auto;
 
 
   .prod {

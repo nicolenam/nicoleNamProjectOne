@@ -282,7 +282,7 @@ html {
 
 nav {
   max-width: 1440px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,33 +394,26 @@ a {
 }
 
 .category-section {
-  max-width: 1440px;
-  width: 80%;
-  margin: 0 auto;
+  max-width: 70%;
+  margin: 5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .category-section div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: relative;
-  margin: 150px auto;
-  width: 100%;
-  max-width: 300px;
   top: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .category-section div p {
   padding: 10px;
@@ -440,7 +433,6 @@ a {
 
 .featured-section {
   text-align: center;
-  margin: 2rem;
 }
 .featured-section h2 {
   font-weight: 500;
@@ -450,21 +442,17 @@ a {
   border-bottom: 2px solid #333;
   padding-bottom: 0.5rem;
   display: inline-block;
-  width: 60px;
 }
 
 .grid {
-  max-width: 1440px;
-  width: 80%;
-  margin: 0 auto;
+  max-width: 90%;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   row-gap: 10px;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
-  margin: 3rem auto;
-  width: auto;
 }
 .grid .prod {
   border: 1px solid lightgray;
@@ -556,7 +544,36 @@ a {
   border: 1px solid #333;
   font-size: 0.7rem;
   padding: 15px 30px;
-  margin-bottom: 5rem;
   cursor: pointer;
   text-align: center;
+}
+
+.sales-section {
+  max-width: 70%;
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.sales-section img {
+  height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sales-section .fifty-off {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.sales-section .sofa-collection {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
