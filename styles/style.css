@@ -450,9 +450,38 @@ a {
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
-  margin: 0 auto;
+  margin: 3rem auto;
   width: 100%;
 }
-.grid div img {
+.grid .prod {
+  border: 1px solid lightgray;
+}
+.grid .prod img {
   width: 100%;
+}
+.grid .prod-1 {
+  position: relative;
+}
+.grid .prod-1 .sale-prod {
+  position: absolute;
+  top: 20px;
+  background: #eba6aa;
+  padding: 2px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.grid .prod-3 {
+  position: relative;
+}
+.grid .prod-3 .new-prod {
+  position: absolute;
+  top: 20px;
+  background: #88cce2;
+  padding: 2px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
 }

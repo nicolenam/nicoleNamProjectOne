@@ -20,3 +20,25 @@
     font-weight: v.$headings-reg;
     font-size: 2rem;
 }
+
+@mixin sale-tag {
+    position: absolute;
+    top: 20px;
+    background: v.$color-sale;
+    padding: 2px 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+@mixin new-tag {
+    position: absolute;
+    top: 20px;
+    background: v.$color-new;
+    padding: 2px 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}

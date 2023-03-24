@@ -1,39 +1,56 @@
-@use 'variables' as v;
-@use 'mixin' as m;
+@use "variables" as v;
+@use "mixin" as m;
 
-.featured-section{
-    text-align: center;
+.featured-section {
+  text-align: center;
 
-    h2{
-        @include m.section-heading;
-        
-    }
+  h2 {
+    @include m.section-heading;
+  }
 
-    .border {
-        border-bottom: 2px solid v.$color-primary;
-        padding-bottom: .5rem;
-        display: inline-block;
-        width: 60px;
-    }
-    
+  .border {
+    border-bottom: 2px solid v.$color-primary;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    width: 60px;
+  }
 }
 
-// GRID STARTS HERE 
+// GRID STARTS HERE
 
 .grid {
-    @include m.main-wrapper;
+  @include m.main-wrapper;
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    row-gap: 10px;
-    column-gap: 10px;
-    margin: 0 auto;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  margin: 3rem auto;
+  width: 100%;
 
-    div {
-        
-        img{
-            width: 100%;
-        }
+  .prod {
+    border: 1px solid lightgray;
+
+    img {
+      width: 100%;
     }
+  }
+
+  .prod-1{
+    position: relative;
+
+    .sale-prod {
+        @include m.sale-tag;
+
+   
+    }
+  }
+
+  .prod-3{
+    position: relative;
+
+    .new-prod{
+        @include m.new-tag;
+    }
+  }
 }
