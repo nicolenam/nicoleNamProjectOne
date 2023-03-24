@@ -3,9 +3,12 @@
 
 .featured-section {
   text-align: center;
+  margin: 2rem;
+
 
   h2 {
     @include m.section-heading;
+    
   }
 
   .border {
@@ -26,7 +29,7 @@
   row-gap: 10px;
   column-gap: 10px;
   margin: 3rem auto;
-  width: 100%;
+  width: auto;
 
 
   .prod {
