@@ -8,22 +8,41 @@ footer{
     
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     .footer-logo{
-        height: 20px;
+        width: 100px;
     }
     
     .footer-container {
         @include m.main-wrapper;
+        margin: 3rem auto;
+        height: 150px;
+        width: 100%;
 
         .footer-column{
+            height: 100%;
 
             flex: 1;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .social-channels{
+
+                img{
+                    padding-right: 10px;
+                }
+            }
+
+            .footer-about{
+                max-width: 70%;
+            }
     
             p{
                 color: #fff;
-                margin: 5px 0;
+                margin: 3px 0;
 
                 &:nth-child(1){
                     font-weight: v.$body-reg;
@@ -36,6 +55,7 @@ footer{
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+                gap: 10px;
     
                 img{
                     height: .7rem;
