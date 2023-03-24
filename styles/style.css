@@ -723,6 +723,10 @@ footer .footer-container .footer-column p {
   color: #fff;
   margin: 5px 0;
 }
+footer .footer-container .footer-column p:nth-child(1) {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
 footer .footer-container .footer-column .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,5 +739,33 @@ footer .footer-container .footer-column .icons {
           align-items: center;
 }
 footer .footer-container .footer-column .icons img {
-  height: 1rem;
+  height: 0.7rem;
+}
+footer .footer-container .footer-column label {
+  font-size: 0.7rem;
+}
+footer .footer-container .footer-column input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: #333;
+}
+footer .footer-container .footer-column input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 0.5rem;
+}
+footer .footer-container .footer-column input::-moz-placeholder {
+  color: #fff;
+  font-size: 0.5rem;
+}
+footer .footer-container .footer-column input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 0.5rem;
+}
+footer .footer-container .footer-column input::-ms-input-placeholder {
+  color: #fff;
+  font-size: 0.5rem;
+}
+footer .footer-container .footer-column input::placeholder {
+  color: #fff;
+  font-size: 0.5rem;
 }

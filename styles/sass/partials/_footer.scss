@@ -24,6 +24,11 @@ footer{
             p{
                 color: #fff;
                 margin: 5px 0;
+
+                &:nth-child(1){
+                    font-weight: v.$body-reg;
+                    font-size: .8rem;
+                }
             }
     
     
@@ -33,7 +38,22 @@ footer{
                 align-items: center;
     
                 img{
-                    height: 1rem;
+                    height: .7rem;
+                }
+            }
+
+            label{
+                font-size: .7rem;
+            }
+
+            input{
+                border: none;
+                border-bottom: 1px solid #fff;
+                background-color: v.$color-primary;
+
+                &::placeholder {
+                    color: #fff;
+                    font-size: .5rem;
                 }
             }
     
