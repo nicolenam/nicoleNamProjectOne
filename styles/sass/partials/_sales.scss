@@ -27,9 +27,12 @@
 
     .sofa-collection{
         flex-grow: 2;
+
+        position: relative;
+
     }
 
-    .sales-detail{
+    .sales-details{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -61,6 +64,30 @@
         }
 
     }
+
+    .sofa-details{
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%); 
+        min-width: 400px;
+
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+
+        p{
+            text-align: center;
+            font-size: 1.5rem;
+            
+            span{
+                font-weight: v.$body-bold;
+                font-size: 3rem;
+            }
+        }
+
+    }
+
     .shop-now{
         font-size: .8rem;
         color: #fff;

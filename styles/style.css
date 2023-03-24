@@ -585,8 +585,9 @@ a {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+  position: relative;
 }
-.sales-section .sales-detail {
+.sales-section .sales-details {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -604,10 +605,10 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.sales-section .sales-detail p {
+.sales-section .sales-details p {
   text-transform: uppercase;
 }
-.sales-section .sales-detail p:nth-child(1) {
+.sales-section .sales-details p:nth-child(1) {
   background: #fff;
   padding: 0 20px;
   font-size: 0.8rem;
@@ -617,10 +618,29 @@ a {
   width: fit-content;
   margin: 0 auto;
 }
-.sales-section .sales-detail p:nth-child(2) {
+.sales-section .sales-details p:nth-child(2) {
   font-weight: 700;
   color: #fff;
   font-size: 2rem;
+}
+.sales-section .sofa-details {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 400px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+}
+.sales-section .sofa-details p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.sales-section .sofa-details p span {
+  font-weight: 700;
+  font-size: 3rem;
 }
 .sales-section .shop-now {
   font-size: 0.8rem;
