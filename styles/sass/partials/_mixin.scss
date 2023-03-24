@@ -24,6 +24,7 @@
 @mixin sale-tag {
     position: absolute;
     top: 20px;
+    left: 0;
     background: v.$color-sale;
     padding: 2px 5px;
     color: #fff;
@@ -35,10 +36,21 @@
 @mixin new-tag {
     position: absolute;
     top: 20px;
+    left: 0;
     background: v.$color-new;
     padding: 2px 5px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
+}
+
+// ELEMENTS 
+
+@mixin btn {
+    background: #fff;
+    border: 1px solid v.$color-primary;
+    font-size: .7rem;
+    padding: 15px 30px;
+    margin-bottom: 5rem;
 }
