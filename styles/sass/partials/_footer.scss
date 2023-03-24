@@ -1,0 +1,43 @@
+@use "./mixin" as m;
+@use "./variables" as v;
+
+footer{
+    
+    background-color: v.$color-primary;
+    color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .footer-logo{
+        height: 20px;
+    }
+    
+    .footer-container {
+        @include m.main-wrapper;
+
+        .footer-column{
+
+            flex: 1;
+    
+            p{
+                color: #fff;
+                margin: 5px 0;
+            }
+    
+    
+            .icons{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+    
+                img{
+                    height: 1rem;
+                }
+            }
+    
+        }
+    }
+
+}
