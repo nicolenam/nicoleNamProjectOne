@@ -5,13 +5,12 @@
   @include m.main-wrapper;
   text-align: center;
 
-  p{
-    color: v.$color-secondary;
-    opacity: .6;
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-
+    p{
+      color: v.$color-secondary;
+      opacity: .6;
+      padding: 10px 0;
+      font-size: 1rem;
+    }
 
   ul {
     display: flex;
@@ -32,7 +31,7 @@
         transition: transform .2s ease-in-out;
 
         &:hover{
-            transform: scale(1.1); 
+            // transform: scale(1.1); 
             cursor: pointer;
         }
     }

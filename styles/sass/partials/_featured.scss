@@ -3,6 +3,8 @@
 
 .featured-section {
   text-align: center;
+  z-index: -10;
+ 
 
   h2 {
     @include m.section-heading;
@@ -33,6 +35,7 @@
 
   row-gap: 10px;
   column-gap: 10px;
+  z-index: -10;
 
 
   .prod {
@@ -53,6 +56,8 @@
 
   .prod-1{
     position: relative;
+    z-index: -10;
+
 
     .product-price{
         display: flex;
@@ -70,6 +75,8 @@
 
   .prod-3{
     position: relative;
+    z-index: -10;
+
 
     .new-prod{
         @include m.new-tag;

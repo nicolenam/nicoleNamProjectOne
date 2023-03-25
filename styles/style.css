@@ -393,19 +393,13 @@ header {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  z-index: 100;
 }
 
 h1 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.2;
-}
-
-.category-section div,
-.featured-section div,
-.sales-section div,
-.instagram-section div {
-  z-index: -10;
 }
 
 h2 {
@@ -535,6 +529,7 @@ a {
 }
 .featured-section {
   text-align: center;
+  z-index: -10;
 }
 .featured-section h2 {
   font-weight: 500;
@@ -562,6 +557,7 @@ a {
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
+  z-index: -10;
 }
 .grid .prod {
   border: 1px solid lightgray;
@@ -581,6 +577,7 @@ a {
 }
 .grid .prod-1 {
   position: relative;
+  z-index: -10;
 }
 .grid .prod-1 .product-price {
   display: -webkit-box;
@@ -604,6 +601,7 @@ a {
 }
 .grid .prod-3 {
   position: relative;
+  z-index: -10;
 }
 .grid .prod-3 .new-prod {
   position: absolute;
@@ -802,8 +800,6 @@ a {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .instagram-section ul img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   cursor: pointer;
 }
 
