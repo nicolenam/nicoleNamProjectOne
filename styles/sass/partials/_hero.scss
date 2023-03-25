@@ -20,3 +20,24 @@
     }
   }
 }
+
+// MEDIA QUERY STARTS HERE 
+@media (max-width:900px){
+  .hero-banner {
+  
+    .hero-content {
+      width: 40%;
+      height: 100%;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10%;
+  
+      p {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+  
+}

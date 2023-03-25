@@ -54,6 +54,9 @@ nav{
 }
 
 .cart {
+
+    display: flex;
+
     position: relative;
 
     p{
@@ -62,7 +65,44 @@ nav{
         right: 0;
         font-size: .5rem;
     }
+
+    .mobile-menu{
+        display: none;
+    }
  
+}
+
+// MEDIA QUERY STARTS HERE 
+@media (max-width:900px){
+    .cart {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        p{
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: .5rem;
+        }
+        
+        .mobile-menu{
+            display: block;
+            text-align: center;
+
+            i{
+                width: 30px;
+                font-size: 20px;
+            }
+        }
+     
+    }
+
+    .desktop-menu{
+        display: none;
+    }
+
 }
 
 

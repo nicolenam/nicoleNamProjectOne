@@ -33,6 +33,9 @@ a{
     color: v.$color-primary;
 }
 
-main{
-}
-
+// MEDIA QUERY STARTS HERE 
+@media (max-width:900px){
+    h1{
+        font-size: 1.5rem;
+    }
+  }

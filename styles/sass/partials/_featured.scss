@@ -120,6 +120,8 @@
     text-align: center;
 }
 
+// MEDIA QUERY STARTS HERE 
+
 @media (max-width:900px){
   .grid{
     grid-template-columns: repeat(2,1fr);
