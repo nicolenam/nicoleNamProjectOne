@@ -65,8 +65,6 @@
 
     .sale-prod {
         @include m.sale-tag;
-
-   
     }
   }
 
@@ -120,4 +118,11 @@
     @include m.btn;
 
     text-align: center;
+}
+
+@media (max-width:900px){
+  .grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
 }

@@ -565,6 +565,11 @@ a {
   text-align: center;
 }
 
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .sales-section {
   max-width: 70%;
   margin: 5rem auto;
