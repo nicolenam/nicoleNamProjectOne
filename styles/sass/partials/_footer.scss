@@ -53,6 +53,8 @@ footer {
         justify-content: flex-start;
         align-items: center;
         gap: 5px;
+        -webkit-gap: 5px;
+        -moz-gap: 5px;
 
         img {
           height: 0.7rem;
@@ -92,6 +94,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
   }
 
 }

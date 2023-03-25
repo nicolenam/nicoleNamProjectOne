@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
     flex-wrap: wrap;
 
     img {

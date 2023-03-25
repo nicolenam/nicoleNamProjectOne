@@ -80,6 +80,8 @@ nav{
         justify-content: center;
         align-items: center;
         gap: 5px;
+        -webkit-gap: 5px;
+        -moz-gap: 5px;
 
         p{
             position: absolute;

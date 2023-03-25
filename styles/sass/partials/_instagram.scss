@@ -17,6 +17,8 @@
     justify-content: space-between;
     max-width: 100%;
     gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
     padding-top: 3rem;
 
     li {
@@ -48,6 +50,8 @@
       display: grid;
       grid-template-columns: repeat(2,1fr);
       gap: 10px;
+      -webkit-gap: 10px;
+      -moz-gap: 10px;
 
       li{
         width: 100%;

@@ -360,6 +360,8 @@ nav ul li a:hover::after {
         -ms-flex-align: center;
             align-items: center;
     gap: 5px;
+    -webkit-gap: 5px;
+    -moz-gap: 5px;
   }
   .cart p {
     position: absolute;
@@ -423,6 +425,7 @@ a {
     font-size: 1.8rem;
     margin: 0 auto;
     font-weight: 700;
+    padding-top: 6rem;
   }
 }
 .hero-banner {
@@ -434,6 +437,7 @@ a {
 .hero-banner .hero-content {
   width: 20%;
   height: 100%;
+  padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,6 +493,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
+  -webkit-gap: 20px;
+  -moz-gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -554,9 +560,11 @@ a {
   max-width: 90%;
   margin: 5rem auto;
   row-gap: 10px;
+  -webkit-row-gap: 10px;
+  -moz-row-gap: 10px;
+  column-gap: 10px;
   -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -moz-column-gap: 10px;
   z-index: -10;
 }
 .grid .prod {
@@ -670,6 +678,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
+  -webkit-gap: 20px;
+  -moz-gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -783,6 +793,8 @@ a {
           justify-content: space-between;
   max-width: 100%;
   gap: 20px;
+  -webkit-gap: 20px;
+  -moz-gap: 20px;
   padding-top: 3rem;
 }
 .instagram-section ul li {
@@ -808,6 +820,8 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    -webkit-gap: 10px;
+    -moz-gap: 10px;
   }
   .instagram-section ul li {
     width: 100%;
@@ -879,6 +893,8 @@ footer .footer-container .footer-column .icons {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+  -webkit-gap: 5px;
+  -moz-gap: 5px;
 }
 footer .footer-container .footer-column .icons img {
   height: 0.7rem;
@@ -923,6 +939,8 @@ footer .footer-container .footer-column input::placeholder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
   }
 }
 @media (max-width: 650px) {

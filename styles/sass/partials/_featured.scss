@@ -34,7 +34,12 @@
   @include m.grid-wrapper;
 
   row-gap: 10px;
+  -webkit-row-gap: 10px;
+  -moz-row-gap: 10px;
   column-gap: 10px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  
   z-index: -10;
 
 
