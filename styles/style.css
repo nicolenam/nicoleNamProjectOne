@@ -515,6 +515,11 @@ a {
     top: 0;
   }
 }
+@media (max-width: 650px) {
+  .category-section div img {
+    height: 250px;
+  }
+}
 .featured-section {
   text-align: center;
 }
