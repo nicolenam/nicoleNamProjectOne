@@ -436,6 +436,11 @@ a {
   top: -40px;
 }
 
+@media (max-width: 1050px) {
+  .category-section div:hover {
+    top: 0;
+  }
+}
 .featured-section {
   text-align: center;
 }
@@ -694,6 +699,19 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 1050px) {
+  .instagram-section ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .instagram-section ul li {
+    width: 100%;
+  }
+  .instagram-section .instagram-temp {
+    display: none;
+  }
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -703,9 +721,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .footer-logo {
   width: 100px;
@@ -714,7 +734,6 @@ footer .footer-container {
   max-width: 70%;
   margin: 5rem auto;
   margin: 3rem auto;
-  height: 150px;
   width: 100%;
 }
 footer .footer-container .footer-column {
@@ -738,6 +757,7 @@ footer .footer-container .footer-column .social-channels img {
 }
 footer .footer-container .footer-column .footer-about {
   max-width: 70%;
+  padding-top: 10px;
 }
 footer .footer-container .footer-column p {
   color: #fff;
@@ -757,18 +777,20 @@ footer .footer-container .footer-column .icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 footer .footer-container .footer-column .icons img {
   height: 0.7rem;
 }
 footer .footer-container .footer-column label {
   font-size: 0.7rem;
+  padding-top: 10px;
 }
 footer .footer-container .footer-column input {
   border: none;
   border-bottom: 1px solid #fff;
   background-color: #333;
+  padding-top: 20px;
 }
 footer .footer-container .footer-column input::-webkit-input-placeholder {
   color: #fff;
@@ -789,4 +811,8 @@ footer .footer-container .footer-column input::-ms-input-placeholder {
 footer .footer-container .footer-column input::placeholder {
   color: #fff;
   font-size: 0.5rem;
+}
+
+.padding {
+  padding-top: 20px;
 }

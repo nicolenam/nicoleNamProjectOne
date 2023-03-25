@@ -23,15 +23,13 @@
     li {
         width: 20%;
         overflow: hidden;
-
     }
 
     img{
         width: 100%;
         height: auto;
         object-fit: cover;
-      transition: transform .2s ease-in-out;
-
+        transition: transform .2s ease-in-out;
 
         &:hover{
             transform: scale(1.1); 
@@ -39,4 +37,31 @@
         }
     }
   }
+}
+
+//MEDIA QUERY STARTS HERE
+
+@media (max-width:1050px){
+
+  .instagram-section {
+
+    ul{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+
+      li{
+        width: 100%;
+      }
+
+    }
+
+    .instagram-temp{
+      display: none;
+    }
+
+
+  }
+ 
+
 }
