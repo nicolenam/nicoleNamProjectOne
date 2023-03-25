@@ -389,10 +389,23 @@ body {
   background-color: #fff;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.2;
+}
+
+.category-section div,
+.featured-section div,
+.sales-section div,
+.instagram-section div {
+  z-index: -10;
 }
 
 h2 {
