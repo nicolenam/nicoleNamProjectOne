@@ -741,6 +741,17 @@ a {
   color: #fff;
 }
 
+@media (max-width: 650px) {
+  .sales-section img {
+    height: 250px;
+  }
+  .sales-section .sofa-details {
+    border: none;
+  }
+  .sales-section .sofa-details p {
+    font-size: 0.7rem;
+  }
+}
 .instagram-section {
   max-width: 70%;
   margin: 5rem auto;
