@@ -724,8 +724,6 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 footer .footer-logo {
   width: 100px;
@@ -735,6 +733,8 @@ footer .footer-container {
   margin: 5rem auto;
   margin: 3rem auto;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .footer-container .footer-column {
   height: 100%;
@@ -815,4 +815,11 @@ footer .footer-container .footer-column input::placeholder {
 
 .padding {
   padding-top: 20px;
+}
+
+@media (max-width: 1050px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
