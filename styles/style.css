@@ -347,7 +347,7 @@ nav ul li a:hover::after {
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .cart {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -411,9 +411,11 @@ a {
   color: #333;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    font-weight: 700;
   }
 }
 .hero-banner {
@@ -440,25 +442,34 @@ a {
 .hero-banner .hero-content p {
   padding-top: 0.5rem;
 }
+.hero-banner .hero-content a {
+  display: none;
+}
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
+  .hero-banner {
+    background-position: 95%;
+    height: 40vh;
+  }
   .hero-banner .hero-content {
-    width: 40%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-left: 10%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
   }
   .hero-banner .hero-content p {
-    padding-top: 0.5rem;
+    display: none;
+  }
+  .hero-banner .hero-content a {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    width: 150px;
+    margin: 30px auto;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 }
 .category-section {
@@ -816,9 +827,6 @@ footer .footer-container .footer-column {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 footer .footer-container .footer-column .social-channels img {
   padding-right: 10px;
@@ -890,5 +898,41 @@ footer .footer-container .footer-column input::placeholder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+}
+@media (max-width: 650px) {
+  footer {
+    text-align: center;
+    font-size: 1rem;
+  }
+  footer .footer-logo {
+    margin: 1rem auto;
+  }
+  footer .footer-container {
+    display: block;
+  }
+  footer .footer-container .footer-about {
+    display: none;
+  }
+  footer .footer-container .profile {
+    display: none;
+  }
+  footer .footer-container .footer-column .social-channels {
+    display: none;
+  }
+  footer .footer-container .footer-column label {
+    font-size: 0.9rem;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

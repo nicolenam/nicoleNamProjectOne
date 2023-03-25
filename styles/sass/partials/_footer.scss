@@ -25,7 +25,6 @@ footer {
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
       .social-channels {
 
@@ -95,4 +94,43 @@ footer {
     gap: 20px;
   }
 
+}
+
+@media (max-width:650px){
+
+  footer {
+    text-align: center;
+    font-size: 1rem;
+
+    .footer-logo{
+      margin: 1rem auto;
+
+    }
+
+    .footer-container{
+      display: block;
+
+      .footer-about{
+        display: none;
+      }
+      .profile{
+        display: none;
+      }
+
+      .footer-column{
+        .social-channels{
+          display: none;
+        }
+        label{
+          font-size: .9rem;
+        }
+      }
+    }
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
