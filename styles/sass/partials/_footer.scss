@@ -128,7 +128,15 @@ footer {
         label{
           font-size: .9rem;
         }
+  
       }
+      
+      p{
+        &:nth-child(1){
+          display:none;
+        }
+      }
+
     }
 
     ul{

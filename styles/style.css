@@ -966,6 +966,9 @@ footer .footer-container .footer-column input::placeholder {
   footer .footer-container .footer-column label {
     font-size: 0.9rem;
   }
+  footer .footer-container p:nth-child(1) {
+    display: none;
+  }
   footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
