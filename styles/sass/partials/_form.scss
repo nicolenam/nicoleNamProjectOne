@@ -11,6 +11,30 @@ form{
     align-items: flex-start;
 
     .sub-btn{
-        margin: 2rem 0 4rem;
+        background-color: #fff;
+        font-family: v.$font-main;
+        padding: 10px 35px;
+        border: 1px solid v.$color-primary;
+        font-size: .7rem;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover{
+            background-color: v.$color-primary;
+            color: #fff;
+        }
+    }
+
+    input,textarea{
+        width: 50%;
+        border: none;
+        border-bottom: 1px solid v.$color-primary;
+        margin-bottom: 2rem;   
+        outline: none;     
+
+        &::placeholder{
+            font-family: v.$font-main;
+            font-size: .7rem;
+        }
     }
 }

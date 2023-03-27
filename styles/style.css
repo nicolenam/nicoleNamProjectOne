@@ -1030,5 +1030,43 @@ form {
           align-items: flex-start;
 }
 form .sub-btn {
-  margin: 2rem 0 4rem;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 35px;
+  border: 1px solid #333;
+  font-size: 0.7rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+form .sub-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+form input, form textarea {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+  outline: none;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+}
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+}
+form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+}
+form input::placeholder, form textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
 }
