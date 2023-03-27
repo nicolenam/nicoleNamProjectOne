@@ -2,15 +2,15 @@
 @use "./variables" as v;
 
 footer{
-  background-color: v.$color-primary;
-  color: #fff;
-
-  // min-height: 25%;
-  // height: 400px;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  
+  background-color: v.$color-primary;
+  color: #fff;
+
+//FIX FOR NOT ENOUGH CONTENT
+  flex:1;
 
   .footer-container {
     @include m.main-wrapper;
