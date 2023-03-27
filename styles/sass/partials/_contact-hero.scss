@@ -1,6 +1,7 @@
 @use "./_variables" as v;
 
 .contact-hero{
+    padding-top: 150px;
     background: url(./../assets/contact-us.jpg) no-repeat 70%;
     background-size: cover;
     height: 35vh;
@@ -8,8 +9,7 @@
 
     .contact-content{
         h1{
-            width: 100%;
-            padding: 8rem;
+ 
         }
     }
   

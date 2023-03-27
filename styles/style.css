@@ -983,12 +983,9 @@ footer .footer-container .footer-column input::placeholder {
   }
 }
 .contact-hero {
+  padding-top: 150px;
   background: url(./../assets/contact-us.jpg) no-repeat 70%;
   background-size: cover;
   height: 35vh;
   width: 100%;
-}
-.contact-hero .contact-content h1 {
-  width: 100%;
-  padding: 8rem;
 }
