@@ -3,19 +3,18 @@
 .hero-banner {
   background: url(./../assets/home.jpg) no-repeat 70% bottom;
   background-size: cover;
-  height: 60vh;
+  min-height: 700px;
   width: 100%;
 
   .hero-content {
     width: 20%;
     height: 100%;
-    padding-top: 1rem;
+    margin: 9rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10%;
-
+    
     p {
       padding-top: 0.5rem;
     }
@@ -31,7 +30,7 @@
 
   .hero-banner {
     background-position: 95%;
-    height: 40vh;
+    // height: 40vh;
 
     .hero-content{
       width: 100%;

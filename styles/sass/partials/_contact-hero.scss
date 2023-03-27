@@ -3,9 +3,9 @@
 
 .contact-hero{
     padding-top: 150px;
-    background: url(./../assets/contact-us.jpg) no-repeat 70%;
+    background: url(./../assets/contact-us.jpg) no-repeat 75%;
     background-size: cover;
-    height: 25vh;
+    min-height: 300px;
     width: 100%;
 
     .contact-content{

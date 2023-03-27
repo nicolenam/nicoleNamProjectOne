@@ -440,13 +440,13 @@ a {
 .hero-banner {
   background: url(./../assets/home.jpg) no-repeat 70% bottom;
   background-size: cover;
-  height: 60vh;
+  min-height: 700px;
   width: 100%;
 }
 .hero-banner .hero-content {
   width: 20%;
   height: 100%;
-  padding-top: 1rem;
+  margin: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,7 +457,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 10%;
 }
 .hero-banner .hero-content p {
   padding-top: 0.5rem;
@@ -469,7 +468,6 @@ a {
 @media (max-width: 700px) {
   .hero-banner {
     background-position: 95%;
-    height: 40vh;
   }
   .hero-banner .hero-content {
     width: 100%;
@@ -594,7 +592,6 @@ a {
 }
 .grid .prod-1 {
   position: relative;
-  z-index: -10;
 }
 .grid .prod-1 .product-price {
   display: -webkit-box;
@@ -618,7 +615,6 @@ a {
 }
 .grid .prod-3 {
   position: relative;
-  z-index: -10;
 }
 .grid .prod-3 .new-prod {
   position: absolute;
@@ -999,9 +995,9 @@ footer .footer-container .footer-column input::placeholder {
 }
 .contact-hero {
   padding-top: 150px;
-  background: url(./../assets/contact-us.jpg) no-repeat 70%;
+  background: url(./../assets/contact-us.jpg) no-repeat 75%;
   background-size: cover;
-  height: 25vh;
+  min-height: 300px;
   width: 100%;
 }
 .contact-hero .contact-content h1 {
