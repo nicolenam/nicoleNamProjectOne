@@ -383,12 +383,14 @@ nav ul li a:hover::after {
 }
 html {
   font-size: 125%;
+  height: 100%;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   color: #333;
   background-color: #fff;
+  height: 100%;
 }
 
 header {
@@ -843,16 +845,19 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-footer .footer-logo {
-  width: 100px;
-}
 footer .footer-container {
   max-width: 70%;
   margin: 5rem auto;
-  margin: 3rem auto;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 3rem auto;
+  width: 100%;
+}
+footer .footer-container .footer-logo {
+  width: 100px;
 }
 footer .footer-container .footer-column {
   height: 100%;
@@ -986,6 +991,34 @@ footer .footer-container .footer-column input::placeholder {
   padding-top: 150px;
   background: url(./../assets/contact-us.jpg) no-repeat 70%;
   background-size: cover;
-  height: 35vh;
+  height: 25vh;
   width: 100%;
+}
+.contact-hero .contact-content h1 {
+  max-width: 70%;
+  margin: 5rem auto;
+  max-width: 45%;
+  margin-top: 2rem;
+}
+
+form {
+  max-width: 70%;
+  margin: 5rem auto;
+  max-width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+form .sub-btn {
+  margin: 2rem 0 4rem;
 }

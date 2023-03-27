@@ -1,23 +1,28 @@
 @use "./mixin" as m;
 @use "./variables" as v;
 
-footer {
+footer{
   background-color: v.$color-primary;
   color: #fff;
+
+  // min-height: 25%;
+  // height: 400px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
-  .footer-logo {
-    width: 100px;
-  }
-
   .footer-container {
     @include m.main-wrapper;
+    display: flex;
+    flex-wrap: wrap;
+
     margin: 3rem auto;
     width: 100%;
-    flex-wrap: wrap;
+
+    .footer-logo {
+      width: 100px;
+    }
 
     .footer-column {
       height: 100%;

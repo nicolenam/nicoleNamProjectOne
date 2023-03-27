@@ -1,15 +1,19 @@
 @use "./_variables" as v;
+@use "./mixin" as m;
 
 .contact-hero{
     padding-top: 150px;
     background: url(./../assets/contact-us.jpg) no-repeat 70%;
     background-size: cover;
-    height: 35vh;
+    height: 25vh;
     width: 100%;
 
     .contact-content{
         h1{
- 
+            @include m.main-wrapper;
+
+            max-width: 45%;
+            margin-top: 2rem;
         }
     }
   
