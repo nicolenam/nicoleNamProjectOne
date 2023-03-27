@@ -77,6 +77,8 @@ footer{
         border-bottom: 1px solid #fff;
         background-color: v.$color-primary;
         padding-top: 20px;
+        outline: none;
+        color: #fff;
 
         &::placeholder {
           color: #fff;

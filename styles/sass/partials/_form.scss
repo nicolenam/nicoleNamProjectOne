@@ -4,7 +4,7 @@
 form{
     @include m.main-wrapper;
 
-    max-width: 45%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,4 +37,14 @@ form{
             font-size: .7rem;
         }
     }
+}
+
+@media (max-width:700px){
+
+    form{
+       input,textarea{
+        width: 100%;
+       }
+    }
+
 }

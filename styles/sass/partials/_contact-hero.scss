@@ -11,10 +11,17 @@
     .contact-content{
         h1{
             @include m.main-wrapper;
-
-            max-width: 45%;
+            max-width: 50%;
             margin-top: 2rem;
         }
     }
   
+}
+
+@media (max-width:700px){
+    .contact-content{
+        h1{
+            padding-top: 0;
+        }
+    }
 }
