@@ -3,7 +3,7 @@
 //LAYOUTS
 
 @mixin nav-wrapper{
-    max-width: v.$width-max;
+    max-width: v.$width-max; //1440px
     width: 95%;
     margin: 0 auto;
 }
@@ -63,3 +63,4 @@
     padding: 15px 30px;
     cursor: pointer;
 }
+

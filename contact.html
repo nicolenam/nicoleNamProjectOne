@@ -54,12 +54,12 @@
     <main>
         <!-- CONTACT FORM STARTS HERE -->
         <form action="/" method="POST" name="email-form" class="contact-form">
-<!-- 
-            <label for="user-name">Your Name</label>  -->
+
+            <label class="sr-only" for="user-name">Your Name</label> 
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
-            <!-- <label for="email">Your Email</label>  -->
+            <label class="sr-only" for="email">Your Email</label> 
             <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <!-- <label for="message">Your Message</label>  -->
+            <label class="sr-only" for="message">Your Message</label> 
             <textarea name="message" id="message" cols="30" rows="3" placeholder="Your Message" required></textarea>
             <button class="sub-btn" name="submit-btn" id="submit-btn">Submit</button>
         </form>
