@@ -749,7 +749,7 @@ a {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  min-width: 400px;
+  min-width: 300px;
   color: #fff;
   border: 1px solid #fff;
   padding: 10px 20px;
