@@ -434,7 +434,7 @@ a {
     font-size: 1.8rem;
     margin: 0 auto;
     font-weight: 700;
-    padding-top: 6rem;
+    padding-top: 10rem;
   }
 }
 .hero-banner {
@@ -981,7 +981,7 @@ footer .footer-container .footer-column input::placeholder {
   footer .footer-container .footer-column label {
     font-size: 0.9rem;
   }
-  footer .footer-container p:nth-child(1) {
+  footer .footer-container .hide-content {
     display: none;
   }
   footer ul {

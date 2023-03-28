@@ -138,10 +138,8 @@ footer{
   
       }
       
-      p{
-        &:nth-child(1){
-          display:none;
-        }
+      .hide-content{
+        display: none;
       }
 
     }
@@ -153,3 +151,5 @@ footer{
     }
   }
 }
+
+

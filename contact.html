@@ -54,11 +54,14 @@
     <main>
         <!-- CONTACT FORM STARTS HERE -->
         <form action="/" method="POST" name="email-form" class="contact-form">
-
+<!-- 
+            <label for="user-name">Your Name</label>  -->
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
+            <!-- <label for="email">Your Email</label>  -->
             <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <!-- <label for="message">Your Message</label>  -->
             <textarea name="message" id="message" cols="30" rows="3" placeholder="Your Message" required></textarea>
-            <button class="sub-btn" type="submit" name="submit-btn" id="submit-btn">Submit</button>
+            <button class="sub-btn" name="submit-btn" id="submit-btn">Submit</button>
         </form>
 
     </main>
@@ -76,7 +79,7 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <p>Contact</p>
+                <a href="./contact.html"><p>Contact</p></a>
                 <ul>
                     <li class="icons">
                         <img src="./assets/icons/address.svg" alt="house icon">
@@ -132,13 +135,12 @@
                 </ul>
             </div>
             <div class="footer-column subscribe">
-                <p>Newsletter</p>
+                <p class="hide-content">Newsletter</p>
                 <label for="newsletter">Subscribe to our newsletter</label>
                 <input type="text" placeholder="Your e-mail...">
                 <p class="padding">@ 2023 Novas</p>
             </div>
         </div>
     </footer>
-        
 </body>
 </html>
