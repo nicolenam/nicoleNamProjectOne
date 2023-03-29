@@ -326,7 +326,7 @@ nav ul li a::after {
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after, nav ul li a:focus::after {
   width: 50%;
   background-color: #333;
 }
@@ -526,12 +526,12 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.category-section div:hover {
+.category-section div:hover, .category-section div:focus {
   top: -40px;
 }
 
 @media (max-width: 1050px) {
-  .category-section div:hover {
+  .category-section div:hover, .category-section div:focus {
     top: 0;
   }
 }
@@ -585,7 +585,7 @@ a {
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-.grid .prod .prod-img:hover {
+.grid .prod .prod-img:hover, .grid .prod .prod-img:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
@@ -816,7 +816,7 @@ a {
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-.instagram-section ul img:hover {
+.instagram-section ul img:hover, .instagram-section ul img:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
@@ -1044,7 +1044,7 @@ form .sub-btn {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-form .sub-btn:hover {
+form .sub-btn:hover, form .sub-btn:focus {
   background-color: #333;
   color: #fff;
 }

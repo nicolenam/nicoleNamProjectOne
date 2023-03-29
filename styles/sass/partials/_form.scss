@@ -19,7 +19,7 @@ form{
         cursor: pointer;
         transition: all .3s ease;
 
-        &:hover{
+        &:hover, &:focus{
             background-color: v.$color-primary;
             color: #fff;
         }

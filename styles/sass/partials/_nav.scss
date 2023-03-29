@@ -44,7 +44,7 @@ nav{
                     .3s ease-in-out;
                 }
 
-                &:hover::after{
+                &:hover::after, &:focus::after{
                     width: 50%;
                     background-color: v.$color-primary;
                 }

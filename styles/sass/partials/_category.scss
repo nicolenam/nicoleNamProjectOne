@@ -30,7 +30,7 @@
       object-fit: cover;
     }
 
-    &:hover {
+    &:hover, &:focus {
       top: -40px;
     }
   }
@@ -44,7 +44,7 @@
 
 
     div {
-      &:hover {
+      &:hover,&:focus {
         top: 0;
         
       }
