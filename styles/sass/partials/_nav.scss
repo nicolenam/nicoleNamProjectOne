@@ -1,7 +1,7 @@
 @use "./mixin" as m;
 @use "./variables" as v;
 
-nav{
+.nav{
     @include m.nav-wrapper;
 
     display: flex;
@@ -12,20 +12,20 @@ nav{
     background-color: #fff;
 
 
-    .logo {
+    &__logo {
         img{
             width: 100px;
         }
     }
 
-    ul{
+    &__desktop{
         display: flex;
         list-style-type: none;
         text-transform: uppercase;
         text-decoration: none;
    
 
-        li {
+        &__items {
             padding: 0 20px;
 
             a {
@@ -52,30 +52,31 @@ nav{
 
         }
     }
+
+    &__mobile{
+
+            display: flex;
+            position: relative;
+        
+            p{
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: .5rem;
+            }
+        
+            &__icons{
+                display: none;
+            }
+         
+    }
 }
 
-.cart {
 
-    display: flex;
-
-    position: relative;
-
-    p{
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: .5rem;
-    }
-
-    .mobile-menu{
-        display: none;
-    }
- 
-}
 
 // MEDIA QUERY STARTS HERE 
 @media (max-width:700px){
-    .cart {
+    .nav__mobile{
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
@@ -90,7 +91,7 @@ nav{
             font-size: .5rem;
         }
         
-        .mobile-menu{
+        &__icons{
             display: block;
             text-align: center;
 
@@ -102,7 +103,7 @@ nav{
      
     }
 
-    .desktop-menu{
+    .nav__desktop{
         display: none;
     }
 

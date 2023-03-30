@@ -280,7 +280,7 @@ html {
           box-sizing: inherit;
 }
 
-nav {
+.nav {
   max-width: 1440px;
   width: 95%;
   margin: 0 auto;
@@ -297,10 +297,10 @@ nav {
   font-size: 0.7rem;
   background-color: #fff;
 }
-nav .logo img {
+.nav__logo img {
   width: 100px;
 }
-nav ul {
+.nav__desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,15 +308,15 @@ nav ul {
   text-transform: uppercase;
   text-decoration: none;
 }
-nav ul li {
+.nav__desktop__items {
   padding: 0 20px;
 }
-nav ul li a {
+.nav__desktop__items a {
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
 }
-nav ul li a::after {
+.nav__desktop__items a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -326,29 +326,28 @@ nav ul li a::after {
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-nav ul li a:hover::after, nav ul li a:focus::after {
+.nav__desktop__items a:hover::after, .nav__desktop__items a:focus::after {
   width: 50%;
   background-color: #333;
 }
-
-.cart {
+.nav__mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-.cart p {
+.nav__mobile p {
   position: absolute;
   top: 0;
   right: 0;
   font-size: 0.5rem;
 }
-.cart .mobile-menu {
+.nav__mobile__icons {
   display: none;
 }
 
 @media (max-width: 700px) {
-  .cart {
+  .nav__mobile {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -363,21 +362,21 @@ nav ul li a:hover::after, nav ul li a:focus::after {
     -webkit-gap: 5px;
     -moz-gap: 5px;
   }
-  .cart p {
+  .nav__mobile p {
     position: absolute;
     top: 0;
     left: 25px;
     font-size: 0.5rem;
   }
-  .cart .mobile-menu {
+  .nav__mobile__icons {
     display: block;
     text-align: center;
   }
-  .cart .mobile-menu i {
+  .nav__mobile__icons i {
     width: 30px;
     font-size: 20px;
   }
-  .desktop-menu {
+  .nav__desktop {
     display: none;
   }
 }
