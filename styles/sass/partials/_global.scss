@@ -45,12 +45,4 @@ a{
     color: v.$color-primary;
 }
 
-// MEDIA QUERY STARTS HERE 
-@media (max-width:810px){
-    h1{
-        font-size: 1.8rem;
-        margin: 0 auto;
-        font-weight: v.$body-bold;
-        padding-top: 10rem;
-    }
-  }
+

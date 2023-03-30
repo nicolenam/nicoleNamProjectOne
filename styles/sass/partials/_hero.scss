@@ -9,16 +9,21 @@
   width: 100%;
 
   .hero-content {
-    width: 20%;
-    height: 100%;
-    margin: 9rem;
+    @include m.main-wrapper;
+
+    height: 700px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
+    h1{
+      width: 3rem;
+    }
+
     p {
       padding-top: 0.5rem;
+      width: 15rem;
     }
 
     a{
@@ -38,6 +43,10 @@
       margin: 0 auto;
       padding: 30px;
       text-align: center;
+
+      h1{
+        width: 100%;
+      }
 
       p{
         display: none;
