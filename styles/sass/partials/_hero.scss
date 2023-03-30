@@ -2,20 +2,18 @@
 @use "./mixin" as m;
 
 
-.hero-banner {
+.hero{
   background: url(./../assets/home.jpg) no-repeat 70% bottom;
   background-size: cover;
   min-height: 700px;
   width: 100%;
 
-  .hero-content {
+  &__content {
     @include m.main-wrapper;
-
-    height: 700px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 700px;
 
     h1{
       width: 3rem;
@@ -29,16 +27,17 @@
     a{
       display: none;
     }
+
   }
 }
 
 // MEDIA QUERY STARTS HERE 
 @media (max-width:810px){
 
-  .hero-banner {
+  .hero {
     background-position: 95%;
 
-    .hero-content{
+    &__content{
       width: 100%;
       margin: 0 auto;
       padding: 30px;
