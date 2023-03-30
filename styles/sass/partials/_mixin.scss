@@ -9,9 +9,14 @@
 }
 
 @mixin main-wrapper{
-    max-width: 70%;
+    max-width: v.$width-regular; //1200px
+    width: 70%;
     margin: 5rem auto;
 }
+
+// @mixin hero-wrapper{
+//     max-width: 75%;
+// }
 
 @mixin grid{
     display: grid;

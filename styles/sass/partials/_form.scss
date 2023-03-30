@@ -4,7 +4,8 @@
 form{
     @include m.main-wrapper;
 
-    max-width: 50%;
+
+    // max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
