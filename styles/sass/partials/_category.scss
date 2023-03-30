@@ -1,9 +1,8 @@
 @use "./variables" as v;
 @use "./mixin" as m;
 
-.category-section {
+.category {
   @include m.main-wrapper;
-
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -11,28 +10,28 @@
   -moz-gap: 20px;
   flex-wrap: wrap;
 
-  div {
+  &__items {
     position: relative;
     top: 0;
     transition: all 0.5s ease;
     flex-grow: 1;
 
-    p {
-      padding: 10px;
-      background-color: v.$color-btn;
-      position: absolute;
-      bottom: 10px;
-    }
+      p {
+        padding: 10px;
+        background-color: v.$color-btn;
+        position: absolute;
+        bottom: 10px;
+      }
 
-    img {
-      height: 450px;
-      width: 100%;
-      object-fit: cover;
-    }
+      img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+      }
 
-    &:hover, &:focus {
-      top: -40px;
-    }
+      &:hover, &:focus {
+        top: -40px;
+      }
   }
 }
 
@@ -40,9 +39,9 @@
 
 @media (max-width:1050px){
 
-  .category-section {
+  .category {
 
-    div {
+    &__items {
       &:hover,&:focus {
         top: 0;
         
@@ -53,7 +52,11 @@
 }
 
 @media (max-width: 650px){
-  .category-section div img{
-    height: 250px;
+
+  .category{
+    &__items img{
+      height: 250px;
+    }
   }
+
 }
