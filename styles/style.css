@@ -838,7 +838,7 @@ a {
     display: none;
   }
 }
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,21 +854,14 @@ footer {
       -ms-flex: 1;
           flex: 1;
 }
-footer .footer-container {
-  max-width: 1200px;
-  width: 70%;
-  margin: 5rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 3rem auto;
-}
-footer .footer-container .footer-logo {
+.footer__logo {
   width: 100px;
 }
-footer .footer-container .footer-column {
+.footer--about {
+  max-width: 70%;
+  padding-top: 10px;
+}
+.footer__column {
   height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -881,22 +874,18 @@ footer .footer-container .footer-column {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-footer .footer-container .footer-column .social-channels img {
+.footer__column .social-channels img {
   padding-right: 10px;
 }
-footer .footer-container .footer-column .footer-about {
-  max-width: 70%;
-  padding-top: 10px;
-}
-footer .footer-container .footer-column p {
+.footer__column p {
   color: #fff;
   margin: 3px 0;
 }
-footer .footer-container .footer-column p:nth-child(1) {
+.footer__column p:nth-child(1) {
   font-weight: 400;
   font-size: 0.8rem;
 }
-footer .footer-container .footer-column .icons {
+.footer__column .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -910,14 +899,14 @@ footer .footer-container .footer-column .icons {
   -webkit-gap: 5px;
   -moz-gap: 5px;
 }
-footer .footer-container .footer-column .icons img {
+.footer__column .icons img {
   height: 0.7rem;
 }
-footer .footer-container .footer-column label {
+.footer__column label {
   font-size: 0.7rem;
   padding-top: 10px;
 }
-footer .footer-container .footer-column input {
+.footer__column input {
   border: none;
   border-bottom: 1px solid #fff;
   background-color: #333;
@@ -925,25 +914,36 @@ footer .footer-container .footer-column input {
   outline: none;
   color: #fff;
 }
-footer .footer-container .footer-column input::-webkit-input-placeholder {
+.footer__column input::-webkit-input-placeholder {
   color: #fff;
   font-size: 0.5rem;
 }
-footer .footer-container .footer-column input::-moz-placeholder {
+.footer__column input::-moz-placeholder {
   color: #fff;
   font-size: 0.5rem;
 }
-footer .footer-container .footer-column input:-ms-input-placeholder {
+.footer__column input:-ms-input-placeholder {
   color: #fff;
   font-size: 0.5rem;
 }
-footer .footer-container .footer-column input::-ms-input-placeholder {
+.footer__column input::-ms-input-placeholder {
   color: #fff;
   font-size: 0.5rem;
 }
-footer .footer-container .footer-column input::placeholder {
+.footer__column input::placeholder {
   color: #fff;
   font-size: 0.5rem;
+}
+.footer__container {
+  max-width: 1200px;
+  width: 70%;
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 3rem auto;
 }
 
 .padding {
@@ -951,7 +951,7 @@ footer .footer-container .footer-column input::placeholder {
 }
 
 @media (max-width: 1050px) {
-  .footer-container {
+  .footer__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -960,32 +960,32 @@ footer .footer-container .footer-column input::placeholder {
   }
 }
 @media (max-width: 650px) {
-  footer {
+  .footer {
     text-align: center;
     font-size: 1rem;
   }
-  footer .footer-logo {
+  .footer__logo {
     margin: 1rem auto;
   }
-  footer .footer-container {
-    display: block;
-  }
-  footer .footer-container .footer-about {
+  .footer--about {
     display: none;
   }
-  footer .footer-container .profile {
+  .footer__column .social-channels {
     display: none;
   }
-  footer .footer-container .footer-column .social-channels {
-    display: none;
-  }
-  footer .footer-container .footer-column label {
+  .footer__column label {
     font-size: 0.9rem;
   }
-  footer .footer-container .hide-content {
+  .footer__container {
+    display: block;
+  }
+  .footer__container .profile {
     display: none;
   }
-  footer ul {
+  .footer__container .hide-content {
+    display: none;
+  }
+  .footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

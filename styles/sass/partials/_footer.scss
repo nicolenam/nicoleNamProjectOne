@@ -1,7 +1,7 @@
 @use "./mixin" as m;
 @use "./variables" as v;
 
-footer{
+.footer{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -12,79 +12,84 @@ footer{
 //FIX FOR NOT ENOUGH CONTENT
   flex:1;
 
-  .footer-container {
+  &__logo {
+    width: 100px;
+  }
+
+  &--about {
+    max-width: 70%;
+    padding-top: 10px;
+  }
+
+  &__column {
+    height: 100%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    .social-channels {
+
+      img {
+        padding-right: 10px;
+      }
+    }
+
+ 
+
+    p {
+      color: #fff;
+      margin: 3px 0;
+
+      &:nth-child(1) {
+        font-weight: v.$body-reg;
+        font-size: 0.8rem;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      -webkit-gap: 5px;
+      -moz-gap: 5px;
+
+      img {
+        height: 0.7rem;
+      }
+    }
+
+    label {
+      font-size: 0.7rem;
+      padding-top: 10px;
+
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background-color: v.$color-primary;
+      padding-top: 20px;
+      outline: none;
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  &__container {
     @include m.main-wrapper;
     display: flex;
     flex-wrap: wrap;
 
     margin: 3rem auto;
 
-    .footer-logo {
-      width: 100px;
-    }
 
-    .footer-column {
-      height: 100%;
-      flex: 1;
 
-      display: flex;
-      flex-direction: column;
-
-      .social-channels {
-
-        img {
-          padding-right: 10px;
-        }
-      }
-
-      .footer-about {
-        max-width: 70%;
-        padding-top: 10px;
-      }
-
-      p {
-        color: #fff;
-        margin: 3px 0;
-
-        &:nth-child(1) {
-          font-weight: v.$body-reg;
-          font-size: 0.8rem;
-        }
-      }
-
-      .icons {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 5px;
-        -webkit-gap: 5px;
-        -moz-gap: 5px;
-
-        img {
-          height: 0.7rem;
-        }
-      }
-
-      label {
-        font-size: 0.7rem;
-        padding-top: 10px;
-
-      }
-
-      input {
-        border: none;
-        border-bottom: 1px solid #fff;
-        background-color: v.$color-primary;
-        padding-top: 20px;
-        outline: none;
-        color: #fff;
-
-        &::placeholder {
-          color: #fff;
-          font-size: 0.5rem;
-        }
-      }
-    }
   }
 }
 
@@ -96,7 +101,7 @@ footer{
 
 @media (max-width:1050px){
 
-  .footer-container{
+  .footer__container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
@@ -108,34 +113,35 @@ footer{
 
 @media (max-width:650px){
 
-  footer {
+  .footer {
     text-align: center;
     font-size: 1rem;
 
-    .footer-logo{
+    &__logo{
       margin: 1rem auto;
-
     }
 
-    .footer-container{
-      display: block;
+    &--about{
+      display: none;
+    }
 
-      .footer-about{
+    &__column{
+      .social-channels{
         display: none;
       }
+      label{
+        font-size: .9rem;
+      }
+    }
+
+    &__container{
+      display: block;
+
       .profile{
         display: none;
       }
 
-      .footer-column{
-        .social-channels{
-          display: none;
-        }
-        label{
-          font-size: .9rem;
-        }
-  
-      }
+
       
       .hide-content{
         display: none;
