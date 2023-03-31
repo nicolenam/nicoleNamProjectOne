@@ -572,7 +572,7 @@ a {
           column-gap: 10px;
   z-index: -10;
 }
-.featured__grid__container {
+.featured__grid__product {
   border: 1px solid lightgray;
   overflow: hidden;
   position: relative;

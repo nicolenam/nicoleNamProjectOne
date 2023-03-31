@@ -7,14 +7,21 @@
     width: 95%;
     margin: 0 auto;
 }
-@mixin main-wrapper{
-    max-width: v.$width-regular; //1200px
-    width: 70%;
-    margin: 5rem auto;
-}
 @mixin grid-wrapper{
     max-width: v.$width-grid; //1400px
     width: 90%;
+    margin: 5rem auto;
+}
+
+@mixin hero-wrapper{
+    max-width: v.$width-hero; //1300px
+    width: 75%;
+    margin: 5rem auto;
+}
+
+@mixin main-wrapper{
+    max-width: v.$width-regular; //1200px
+    width: 70%;
     margin: 5rem auto;
 }
 

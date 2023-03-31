@@ -32,7 +32,7 @@
       column-gap: 10px;
       z-index: -10;
 
-      &__container {
+      &__product {
         border: 1px solid lightgray;
         overflow: hidden;
         position: relative;
@@ -115,7 +115,7 @@
 
     &:hover,&:focus{
       background: v.$color-primary;
-      color:  v.$color-tertiary;
+      color: #fff;
     }
 }
 
