@@ -1,138 +1,127 @@
 @use "variables" as v;
 @use "mixin" as m;
 
-.featured-section {
+.featured {
   text-align: center;
   z-index: -10;
  
+    h2 {
+      @include m.section-heading;
+      position: relative;
 
-  h2 {
-    @include m.section-heading;
-    position: relative;
-
-    &::before{
-      content: "";
-      position: absolute;
-      background-color: v.$color-primary;
-      width: 3rem;
-      height: 3px;
-      bottom: -20px;
-      left: 50%;
-      // will position the left edge of the pseudo-element at the center of the h2 element
-      transform: translateX(-50%); 
-      // will translate the element horizontally by 50% of its own width towards the left
+      &::before{
+        content: "";
+        position: absolute;
+        background-color: v.$color-primary;
+        width: 3rem;
+        height: 3px;
+        bottom: -20px;
+        left: 50%;
+        // will position the left edge of the pseudo-element at the center of the h2 element
+        transform: translateX(-50%); 
+        // will translate the element horizontally by 50% of its own width towards the left
+      }
+      
     }
-    
-  }
+
+    // GRID STARTS HERE
+    &__grid {
+      @include m.grid;
+      @include m.grid-wrapper;
+
+      row-gap: 10px;
+      -webkit-row-gap: 10px;
+      -moz-row-gap: 10px;
+      column-gap: 10px;
+      -webkit-column-gap: 10px;
+      -moz-column-gap: 10px;
+      z-index: -10;
+
+      &__container {
+        border: 1px solid lightgray;
+        overflow: hidden;
+        position: relative;
+
+        img{
+          width: 100%;
+          transition: transform .2s ease-in-out;
+
+          &:hover, &:focus {
+            transform: scale(1.1); 
+            cursor: pointer;
+          }
+        }
+      }
+
+
+      .prod-3{
+        position: relative;
+
+        .new-prod{
+            @include m.new-tag;
+        }
+        
+      }
+
+    }
 
 }
 
-// GRID STARTS HERE
+ .product{
 
-.grid {
-  @include m.grid;
-  @include m.grid-wrapper;
+      &__container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+    
+    
+            div{
+                text-align: left;
+            }
+    
+            p{
+                font-weight: v.$body-reg;
+            }
+    
+            
+          }
+         
+       &__name{
+              font-weight: v.$headings-reg;
+              font-size: .8rem;
+          }
+    
+        a {
+            background: #fff;
+            border: 1px solid lightgray;
+        }
 
-  row-gap: 10px;
-  -webkit-row-gap: 10px;
-  -moz-row-gap: 10px;
-  column-gap: 10px;
-  -webkit-column-gap: 10px;
-  -moz-column-gap: 10px;
-  
-  z-index: -10;
+        &__price{
+          display: flex;
 
-
-  .prod {
-    border: 1px solid lightgray;
-    overflow: hidden;
-
-    .prod-img{
-      width: 100%;
-      transition: transform .2s ease-in-out;
-
-      &:hover, &:focus {
-        transform: scale(1.1); 
-        cursor: pointer;
-
-      }
-    }
-  }
-
-  .prod-1{
-    position: relative;
-
-    .product-price{
-        display: flex;
-
-        .reg-price{
+          &--reg{
             text-decoration: line-through;
             padding-right: 10px;
+          }
         }
-    }
-
-    .sale-prod {
-        @include m.sale-tag;
-    }
-  }
-
-  .prod-3{
-    position: relative;
-
-    .new-prod{
-        @include m.new-tag;
-    }
     
-  }
-
-  .product-description{
-
-
-    .flex-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        overflow: hidden;
-
-
-        div{
-            text-align: left;
-        }
-
-        p{
-            font-weight: v.$body-reg;
-        }
-
-        .prod-name{
-            font-weight: v.$headings-reg;
-            font-size: .8rem;
-        }
-       
     }
 
-    a {
-        background: #fff;
-        border: 1px solid lightgray;
-    }
-  }
-
-}
-
-.reg-price{
-    font-weight: v.$body-reg;
+  .sales-tag{
+    @include m.sale-tag;
 }
 
 .view-btn {
     @include m.btn;
-
     text-align: center;
 }
 
 // MEDIA QUERY STARTS HERE 
 
 @media (max-width:900px){
-  .grid{
+  .featured__grid{
     grid-template-columns: repeat(2,1fr);
   }
 

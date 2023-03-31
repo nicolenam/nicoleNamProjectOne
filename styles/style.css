@@ -540,16 +540,16 @@ a {
     height: 250px;
   }
 }
-.featured-section {
+.featured {
   text-align: center;
   z-index: -10;
 }
-.featured-section h2 {
+.featured h2 {
   font-weight: 500;
   font-size: 2rem;
   position: relative;
 }
-.featured-section h2::before {
+.featured h2::before {
   content: "";
   position: absolute;
   background-color: #333;
@@ -560,8 +560,7 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
-.grid {
+.featured__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   max-width: 90%;
@@ -574,49 +573,27 @@ a {
   -moz-column-gap: 10px;
   z-index: -10;
 }
-.grid .prod {
+.featured__grid__container {
   border: 1px solid lightgray;
   overflow: hidden;
+  position: relative;
 }
-.grid .prod .prod-img {
+.featured__grid__container img {
   width: 100%;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-.grid .prod .prod-img:hover, .grid .prod .prod-img:focus {
+.featured__grid__container img:hover, .featured__grid__container img:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
 }
-.grid .prod-1 {
+.featured__grid .prod-3 {
   position: relative;
 }
-.grid .prod-1 .product-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.grid .prod-1 .product-price .reg-price {
-  text-decoration: line-through;
-  padding-right: 10px;
-}
-.grid .prod-1 .sale-prod {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  background: #eba6aa;
-  padding: 2px 5px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-.grid .prod-3 {
-  position: relative;
-}
-.grid .prod-3 .new-prod {
+.featured__grid .prod-3 .new-prod {
   position: absolute;
   top: 20px;
   left: 0;
@@ -627,7 +604,8 @@ a {
   letter-spacing: 2px;
   font-weight: 500;
 }
-.grid .product-description .flex-container {
+
+.product__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,23 +618,40 @@ a {
   padding: 15px;
   overflow: hidden;
 }
-.grid .product-description .flex-container div {
+.product__container div {
   text-align: left;
 }
-.grid .product-description .flex-container p {
+.product__container p {
   font-weight: 400;
 }
-.grid .product-description .flex-container .prod-name {
+.product__name {
   font-weight: 500;
   font-size: 0.8rem;
 }
-.grid .product-description a {
+.product a {
   background: #fff;
   border: 1px solid lightgray;
 }
+.product__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product__price--reg {
+  text-decoration: line-through;
+  padding-right: 10px;
+}
 
-.reg-price {
-  font-weight: 400;
+.sales-tag {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: #eba6aa;
+  padding: 2px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .view-btn {
@@ -669,7 +664,7 @@ a {
 }
 
 @media (max-width: 900px) {
-  .grid {
+  .featured__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
