@@ -778,19 +778,19 @@ a {
     font-size: 0.7rem;
   }
 }
-.instagram-section {
+.instagram {
   max-width: 1200px;
   width: 70%;
   margin: 5rem auto;
   text-align: center;
 }
-.instagram-section p {
+.instagram p {
   color: #666;
   opacity: 0.6;
   padding: 10px 0;
   font-size: 1rem;
 }
-.instagram-section ul {
+.instagram ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,11 +803,11 @@ a {
   -moz-gap: 20px;
   padding-top: 3rem;
 }
-.instagram-section ul li {
+.instagram ul li {
   width: 20%;
   overflow: hidden;
 }
-.instagram-section ul img {
+.instagram ul img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -817,24 +817,24 @@ a {
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-.instagram-section ul img:hover, .instagram-section ul img:focus {
+.instagram ul img:hover, .instagram ul img:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
 }
 
 @media (max-width: 1050px) {
-  .instagram-section ul {
+  .instagram ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     -webkit-gap: 10px;
     -moz-gap: 10px;
   }
-  .instagram-section ul li {
+  .instagram ul li {
     width: 100%;
   }
-  .instagram-section .instagram-temp {
+  .instagram--desktop {
     display: none;
   }
 }

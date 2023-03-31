@@ -1,7 +1,7 @@
 @use "./mixin" as m;
 @use "./variables" as v;
 
-.instagram-section {
+.instagram {
   @include m.main-wrapper;
   text-align: center;
 
@@ -44,7 +44,7 @@
 
 @media (max-width:1050px){
 
-  .instagram-section {
+  .instagram {
 
     ul{
       display: grid;
@@ -59,7 +59,7 @@
 
     }
 
-    .instagram-temp{
+    &--desktop{
       display: none;
     }
 
