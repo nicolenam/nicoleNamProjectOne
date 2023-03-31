@@ -610,9 +610,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 15px;
   overflow: hidden;
 }
@@ -800,6 +800,7 @@ a {
   max-width: 100%;
   gap: 20px;
   -webkit-gap: 20px;
+  -webkit-column-gap: 20px;
   -moz-gap: 20px;
   padding-top: 3rem;
 }
