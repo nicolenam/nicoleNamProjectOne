@@ -672,7 +672,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.sales-section {
+.sales {
   max-width: 1200px;
   width: 70%;
   margin: 5rem auto;
@@ -688,26 +688,26 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.sales-section img {
+.sales img {
   height: 450px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sales-section .fifty-off {
+.sales--fifty {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
   position: relative;
 }
-.sales-section .sofa-collection {
+.sales .sofa-collection {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   position: relative;
 }
-.sales-section .sales-details {
+.sales--details {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -725,10 +725,10 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.sales-section .sales-details p {
+.sales--details p {
   text-transform: uppercase;
 }
-.sales-section .sales-details p:nth-child(1) {
+.sales--details p:nth-child(1) {
   background: #fff;
   padding: 0 20px;
   font-size: 0.8rem;
@@ -738,12 +738,12 @@ a {
   width: fit-content;
   margin: 0 auto;
 }
-.sales-section .sales-details p:nth-child(2) {
+.sales--details p:nth-child(2) {
   font-weight: 700;
   color: #fff;
   font-size: 2rem;
 }
-.sales-section .sofa-details {
+.sales--sofa {
   position: absolute;
   top: 40px;
   left: 50%;
@@ -754,27 +754,27 @@ a {
   border: 1px solid #fff;
   padding: 10px 20px;
 }
-.sales-section .sofa-details p {
+.sales--sofa p {
   text-align: center;
   font-size: 1.5rem;
 }
-.sales-section .sofa-details p span {
+.sales--sofa p span {
   font-weight: 700;
   font-size: 3rem;
 }
-.sales-section .shop-now {
+.sales .shop-now {
   font-size: 0.8rem;
   color: #fff;
 }
 
 @media (max-width: 650px) {
-  .sales-section img {
+  .sales img {
     height: 250px;
   }
-  .sales-section .sofa-details {
+  .sales .sofa-details {
     border: none;
   }
-  .sales-section .sofa-details p {
+  .sales .sofa-details p {
     font-size: 0.7rem;
   }
 }

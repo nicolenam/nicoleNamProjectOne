@@ -1,7 +1,7 @@
 @use "./mixin" as m;
 @use "./variables" as v;
 
-.sales-section{
+.sales{
     @include m.main-wrapper;
 
     display: flex;
@@ -17,7 +17,7 @@
         object-fit: cover;
     }
 
-    .fifty-off{
+    &--fifty{
         flex-grow: 1;
 
         text-align: center;
@@ -31,7 +31,7 @@
 
     }
 
-    .sales-details{
+    &--details{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -64,7 +64,7 @@
 
     }
 
-    .sofa-details{
+    &--sofa{
         position: absolute;
         top: 40px;
         left: 50%;
@@ -95,7 +95,7 @@
 }
 
 @media (max-width: 650px){
-    .sales-section {
+    .sales{
         img{
             height: 250px;
         }
