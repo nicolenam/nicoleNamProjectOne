@@ -530,7 +530,7 @@ a {
   top: -40px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1367px) {
   .category__items:hover, .category__items:focus {
     top: 0;
   }
