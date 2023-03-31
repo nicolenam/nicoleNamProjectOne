@@ -37,8 +37,8 @@
             transform: translateX(-50%); 
             min-width: 300px;
     
-            color: #fff;
-            border: 1px solid #fff;
+            color: v.$color-tertiary;
+            border: 1px solid v.$color-tertiary;
             padding: 10px 20px;
     
             p{
@@ -76,7 +76,7 @@
             text-transform: uppercase;
 
             &:nth-child(1){
-                background: #fff;
+                background: v.$color-tertiary;
                 padding: 0 20px;
                 font-size: .8rem;
                 color: #d7b89c;
@@ -86,7 +86,7 @@
 
             &:nth-child(2){
                 font-weight: v.$body-bold;
-                color: #fff;
+                color: v.$color-tertiary;
                 font-size: 2rem;
             }
         }
@@ -97,7 +97,7 @@
 
     .shop-now{
         font-size: .8rem;
-        color: #fff;
+        color: v.$color-tertiary;
     }
 
 }

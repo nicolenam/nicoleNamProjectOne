@@ -9,7 +9,7 @@ html{
 body{
     font-family: v.$font-main;
     color: v.$color-primary;
-    background-color: #fff;
+    background-color:  v.$color-tertiary;
     //FIX FOR CONTACT FOOTER
     display:flex; 
     flex-direction:column; 
@@ -19,7 +19,7 @@ body{
 header{
     position: fixed;
     width: 100%;
-    background-color: #fff;
+    background-color:  v.$color-tertiary;
     z-index: 100;
 }
 

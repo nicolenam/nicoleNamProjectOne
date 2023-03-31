@@ -89,7 +89,7 @@
           }
     
         a {
-            background: #fff;
+            background:  v.$color-tertiary;
             border: 1px solid lightgray;
         }
 
@@ -115,7 +115,7 @@
 
     &:hover,&:focus{
       background: v.$color-primary;
-      color: #fff;
+      color:  v.$color-tertiary;
     }
 }
 

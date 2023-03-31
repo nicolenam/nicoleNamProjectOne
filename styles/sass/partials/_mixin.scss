@@ -1,10 +1,5 @@
 @use './variables' as v;
 
-@mixin section-heading {
-    font-weight: v.$headings-reg;
-    font-size: 2rem;
-}
-
 //WRAPPERS AND GRID
 
 @mixin nav-wrapper{
@@ -22,19 +17,15 @@
     width: 90%;
     margin: 5rem auto;
 }
-@mixin grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
 
-//TAGS, BUTTONS CAN BE RE-USED
+//REUSABLE ELEMENTS 
 @mixin sale-tag {
     position: absolute;
     top: 20px;
     left: 0;
     background: v.$color-sale;
     padding: 2px 5px;
-    color: #fff;
+    color: v.$color-tertiary;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
@@ -45,16 +36,26 @@
     left: 0;
     background: v.$color-new;
     padding: 2px 5px;
-    color: #fff;
+    color: v.$color-tertiary;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
 }
 @mixin btn {
-    background: #fff;
+    background: v.$color-tertiary;
     border: 1px solid v.$color-primary;
     font-size: .7rem;
     padding: 15px 30px;
     cursor: pointer;
+}
+
+@mixin section-heading {
+    font-weight: v.$headings-reg;
+    font-size: 2rem;
+}
+
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
