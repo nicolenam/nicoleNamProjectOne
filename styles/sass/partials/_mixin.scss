@@ -18,7 +18,8 @@
     margin: 5rem auto;
 }
 @mixin grid-wrapper{
-    max-width: 90%;
+    max-width: v.$width-grid; //1400px
+    width: 90%;
     margin: 5rem auto;
 }
 @mixin grid{
