@@ -17,7 +17,7 @@
         object-fit: cover;
     }
 
-    &--fifty{
+    &__fifty{
         flex-grow: 1;
 
         text-align: center;
@@ -25,9 +25,38 @@
 
     }
 
-    .sofa-collection{
+    &__sofa{
         flex-grow: 2;
         position: relative;
+
+
+        &--details{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%); 
+            min-width: 300px;
+    
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+    
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                
+                span{
+                    font-weight: v.$body-bold;
+                    font-size: 3rem;
+                }
+            }
+    
+        }
+
+
+
+
+
 
     }
 
@@ -64,28 +93,7 @@
 
     }
 
-    &--sofa{
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%); 
-        min-width: 300px;
-
-        color: #fff;
-        border: 1px solid #fff;
-        padding: 10px 20px;
-
-        p{
-            text-align: center;
-            font-size: 1.5rem;
-            
-            span{
-                font-weight: v.$body-bold;
-                font-size: 3rem;
-            }
-        }
-
-    }
+    
 
     .shop-now{
         font-size: .8rem;
@@ -95,14 +103,17 @@
 }
 
 @media (max-width: 650px){
-    .sales{
+    .sales {
         img{
             height: 250px;
         }
-        .sofa-details{
-            border: none;
-            p{
-            font-size: .7rem;
+
+        .sales__sofa{
+            &--details{
+                border: none;
+                p{
+                font-size: .7rem;
+                }
             }
         }
     }

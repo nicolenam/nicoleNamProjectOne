@@ -694,18 +694,37 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sales--fifty {
+.sales__fifty {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
   position: relative;
 }
-.sales .sofa-collection {
+.sales__sofa {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   position: relative;
+}
+.sales__sofa--details {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 300px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+}
+.sales__sofa--details p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.sales__sofa--details p span {
+  font-weight: 700;
+  font-size: 3rem;
 }
 .sales--details {
   position: absolute;
@@ -743,25 +762,6 @@ a {
   color: #fff;
   font-size: 2rem;
 }
-.sales--sofa {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  min-width: 300px;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 20px;
-}
-.sales--sofa p {
-  text-align: center;
-  font-size: 1.5rem;
-}
-.sales--sofa p span {
-  font-weight: 700;
-  font-size: 3rem;
-}
 .sales .shop-now {
   font-size: 0.8rem;
   color: #fff;
@@ -771,10 +771,10 @@ a {
   .sales img {
     height: 250px;
   }
-  .sales .sofa-details {
+  .sales .sales__sofa--details {
     border: none;
   }
-  .sales .sofa-details p {
+  .sales .sales__sofa--details p {
     font-size: 0.7rem;
   }
 }
