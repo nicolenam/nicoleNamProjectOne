@@ -9,7 +9,7 @@
       @include m.section-heading;
       position: relative;
 
-      &::before{
+      &::after{
         content: "";
         position: absolute;
         background-color: v.$color-primary;
@@ -21,7 +21,7 @@
         transform: translateX(-50%); 
         // will translate the element horizontally by 50% of its own width towards the left
       }
-      
+
     }
 
     // GRID STARTS HERE

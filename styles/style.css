@@ -549,7 +549,7 @@ a {
   font-size: 2rem;
   position: relative;
 }
-.featured h2::before {
+.featured h2::after {
   content: "";
   position: absolute;
   background-color: #333;
