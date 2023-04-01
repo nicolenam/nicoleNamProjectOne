@@ -553,7 +553,7 @@ a {
   content: "";
   position: absolute;
   background-color: #333;
-  width: 3rem;
+  width: 50px;
   height: 3px;
   bottom: -20px;
   left: 50%;
