@@ -88,9 +88,10 @@
               font-size: .8rem;
           }
     
-        a {
+        img {
             background:  v.$color-tertiary;
             border: 1px solid lightgray;
+            cursor: pointer;
         }
 
         &__price{

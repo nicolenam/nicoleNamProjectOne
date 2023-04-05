@@ -627,9 +627,10 @@ a {
   font-weight: 500;
   font-size: 0.8rem;
 }
-.product a {
+.product img {
   background: #fff;
   border: 1px solid lightgray;
+  cursor: pointer;
 }
 .product__price {
   display: -webkit-box;
