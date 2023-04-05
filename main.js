@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // I want to disable scroll onload for modal + overlay   
-    window.onload = () =>{
-        document.querySelector('body').className = 'no-scroll';
-    }
+//codes below run when all the content is loaded first
 
     // 1) SELECTED ELEMENTS FOR SHOPPING BAG
     const bag = document.querySelectorAll('.product__container img');
-    let numOfItems = 0;
     const displayNum = document.querySelector('.nav__mobile p');
+    let numOfItems = 0;
 
     //displays nodeList in an array
     console.log(bag);
@@ -20,15 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
             //added the click event to all the bags.
             bag[i].addEventListener('click', function(){
 
-            //for each click event I want to increment numOfItems
+            //for each click event I want to increment numOfItems.
             numOfItems++;
 
-            //I want to append the numOfItems to displayNum
+            //I want to append the numOfItems to displayNum.
             displayNum.innerHTML = numOfItems;
         
-        }); 
+            }); 
 
-    }
+        }
 
   
 
@@ -36,17 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const exitTop = document.querySelector('.modal--exit');
     const exitBottom = document.querySelector('.modal--action p');
 
-    console.log(exitTop);
-    console.log(exitBottom);
+    // I want to disable scroll initially for modal + overlay styles.  
+    window.onload = () =>{
+        document.querySelector('body').className = 'no-scroll';
+    }
 
     const closeModal = () =>{
         console.log('close modal by display:none');
         console.log('remove no-scroll class');
     }
 
-        //call function when click is detected
-        exitTop.addEventListener('click', closeModal);
-        exitBottom.addEventListener('click', closeModal);
+    //call function when click is detected.
+    exitTop.addEventListener('click', closeModal);
+    exitBottom.addEventListener('click', closeModal);
 
 
     
