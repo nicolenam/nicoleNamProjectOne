@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 //codes below run when all the content is loaded first
 
+    //method re-sets the scroll to the top left
+    window.scrollTo(0, 0);
+    //this is a fix for modal showing anywhere on page after a refresh
+
     // 1) ADD ITEMS TO SHOPPING BAG
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
@@ -26,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-  
 
     // 2) MODAL INTERACTION
     const body = document.querySelector('body');
