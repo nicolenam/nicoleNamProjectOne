@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if(nameInput.value && emailInput.value){
            closeModal();
-           //prevents reload on submit
+           //prevents default submit behavior: reload
            e.preventDefault();
            //clear input value 
            nameInput.value = '';
