@@ -29,22 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
     // 2)SELECTED ELEMENTS FOR MODAL INTERACTION
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.overlay');
+    const modal = document.querySelector('.modal');
     const exitTop = document.querySelector('.modal--exit');
     const exitBottom = document.querySelector('.modal--action p');
+    const submitSignUp = document.querySelector('.modal--action button');
+
 
     // I want to disable scroll initially for modal + overlay styles.  
     window.onload = () =>{
-        document.querySelector('body').className = 'no-scroll';
+        body.className = 'no-scroll';
     }
 
     const closeModal = () =>{
-        console.log('close modal by display:none');
-        console.log('remove no-scroll class');
+        //close modal and remove overlay by adding 'modal--close' class
+        modal.className = 'modal--close';
+        overlay.className = 'modal--close';
+        //remove the class 'no-scroll'
+        body.className = ''; 
     }
 
     //call function when click is detected.
     exitTop.addEventListener('click', closeModal);
     exitBottom.addEventListener('click', closeModal);
+    submitSignUp.addEventListener('click', closeModal);
+    
+    
 
 
     

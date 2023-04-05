@@ -1148,3 +1148,7 @@ form input::placeholder, form textarea::placeholder {
   height: 100vh;
   overflow-y: hidden;
 }
+
+.modal--close {
+  display: none;
+}
