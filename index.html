@@ -20,6 +20,7 @@
     <title>Novas</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <header>
       <!-- NAV STARTS HERE  -->
       <nav class="nav">
@@ -527,7 +528,7 @@
 
     <!-- MODAL STARTS HERE  -->
     <div class="modal">
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times modal--exit"></i>
         <div class="modal__content">
             <h3>Stay up to date with what's new!</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, iure adipisci laborum omnis culpa aliquam earum qui distinctio, quasi dolor ullam rerum aperiam rem ipsum impedit est molestias? Expedita, nisi.</p>
@@ -537,7 +538,10 @@
             <input type="text" placeholder="type your name">
             <label for="" class="sr-only"></label>
             <input type="email" name="" id="" placeholder="type your email">
-            <button class="sub-btn" name="submit-btn" id="submit-btn">Submit</button>
+            <div class="modal--action">
+                <button class="sub-btn" name="submit-btn" id="submit-btn">Submit</button>
+                <p>no thanks</p>
+            </div>
         </form>
     </div>
   </body>

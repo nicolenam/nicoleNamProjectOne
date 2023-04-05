@@ -1093,8 +1093,9 @@ form input::placeholder, form textarea::placeholder {
           transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 1rem;
-  -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.5);
-          box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.5);
+  -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
+          box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
+  z-index: 300;
 }
 .modal h3 {
   padding: 1rem 0;
@@ -1102,6 +1103,7 @@ form input::placeholder, form textarea::placeholder {
 .modal i {
   float: right;
   padding: 1rem;
+  cursor: pointer;
 }
 .modal__content {
   padding: 3rem 5rem 0;
@@ -1112,4 +1114,36 @@ form input::placeholder, form textarea::placeholder {
 }
 .modal input {
   width: 100%;
+}
+.modal--action {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.modal--action p {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(102, 102, 102, 0.4);
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
 }

@@ -8,8 +8,9 @@
     transform: translate(-50%, -50%);
     background-color: v.$color-tertiary;
     border-radius: 1rem;
-    box-shadow: 10px 5px 5px rgba(v.$color-secondary, .5);
-    
+    box-shadow: 10px 5px 5px rgba(v.$color-secondary, .4);
+    z-index: 300;
+
     h3{
         padding: 1rem 0;
     }
@@ -17,6 +18,7 @@
     i{
         float: right;
         padding: 1rem;
+        cursor: pointer;
     }
 
     &__content{
@@ -31,5 +33,33 @@
     input {
         width: 100%;
     }
-   
+
+    &--action{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        p{
+            cursor: pointer;
+        }
+    }
+  }
+
+  .overlay{
+    position: absolute;
+    background-color: rgba(v.$color-secondary, 0.4);
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  //STOPS THE SCROLL WHEN MODAL IS OPEN
+  .no-scroll {
+    height: 100vh;
+    overflow-y: hidden;
   }
