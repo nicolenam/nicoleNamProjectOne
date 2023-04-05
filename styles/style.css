@@ -1096,22 +1096,21 @@ form input::placeholder, form textarea::placeholder {
   -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
           box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
   z-index: 300;
+  min-width: 320px;
+  padding: 3rem;
 }
 .modal h3 {
   padding: 1rem 0;
   font-weight: 700;
 }
 .modal i {
-  float: right;
-  padding: 1rem;
-  cursor: pointer;
-}
-.modal__content {
-  padding: 3rem 5rem 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 .modal__form {
-  margin: 0 auto;
-  padding: 3rem 0;
+  width: 100%;
+  margin: 3rem auto 0;
 }
 .modal input {
   width: 100%;
