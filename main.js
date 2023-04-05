@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 //codes below run when all the content is loaded first
 
-    // 1) SELECTED ELEMENTS FOR SHOPPING BAG
+    // 1) ADD ITEMS TO SHOPPING BAG
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
@@ -9,17 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     //displays nodeList in an array
     console.log(bag);
 
-    //when I click on all the bags I want to increment number in the numOfItems.
+    //click any bag in Featured sale section to increment number in numOfItems
 
         for(let i = 0; i < bag.length; i++){
 
-            //added the click event to all the bags.
+            //added click event to all the bags
             bag[i].addEventListener('click', function(){
 
-            //for each click event I want to increment numOfItems.
+            //for each click event: increment numOfItems
             numOfItems++;
 
-            //I want to append the numOfItems to displayNum.
+            //append the numOfItems to displayNum
             displayNum.innerHTML = numOfItems;
         
             }); 
@@ -28,16 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-    // 2)SELECTED ELEMENTS FOR MODAL INTERACTION
+    // 2) MODAL INTERACTION
     const body = document.querySelector('body');
     const overlay = document.querySelector('.overlay');
     const modal = document.querySelector('.modal');
     const exitTop = document.querySelector('.modal--exit');
     const exitBottom = document.querySelector('.modal--action p');
     const submitSignUp = document.querySelector('.modal--action button');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    
+    console.log(nameInput.value);
+    console.log(emailInput.value);
 
 
-    // I want to disable scroll initially for modal + overlay styles.  
+    //disable scroll initially for modal + overlay styles  
     window.onload = () =>{
         body.className = 'no-scroll';
     }
@@ -50,10 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
         body.className = ''; 
     }
 
-    //call function when click is detected.
+    //call 'closeModal' function when click is detected
     exitTop.addEventListener('click', closeModal);
     exitBottom.addEventListener('click', closeModal);
-    submitSignUp.addEventListener('click', closeModal);
+
+    submitSignUp.addEventListener('click', function(e){
+        
+        if(nameInput.value && emailInput.value){
+           closeModal();
+           //prevents reload on submit
+           e.preventDefault();
+           //clear input value 
+           nameInput.value = '';
+           emailInput.value = '';
+        }
+
+    });
     
     
 
