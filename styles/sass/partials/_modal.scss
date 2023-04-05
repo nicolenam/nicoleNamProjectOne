@@ -1,0 +1,35 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: v.$color-tertiary;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px rgba(v.$color-secondary, .5);
+    
+    h3{
+        padding: 1rem 0;
+    }
+
+    i{
+        float: right;
+        padding: 1rem;
+    }
+
+    &__content{
+        padding: 3rem 5rem 0;
+    }
+
+    &__form{
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+    
+    input {
+        width: 100%;
+    }
+   
+  }
