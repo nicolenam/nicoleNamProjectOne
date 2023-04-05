@@ -10,7 +10,8 @@
     border-radius: 1rem;
     box-shadow: 10px 5px 5px rgba(v.$color-secondary, .4);
     z-index: 300;
-    min-width: 320px;
+    min-width: 315px;
+    max-width: 500px;
     padding: 3rem;
 
     h3{
@@ -66,3 +67,20 @@
   .modal--close{
     display:none;
   }
+
+
+  // MEDIA QUERY STARTS HERE 
+    @media (max-width:700px){
+    .modal{
+        &__content{
+            p{
+                display: none;
+            }
+        }
+        &__form{
+        margin: 1rem auto 0;
+
+        }
+    }
+    
+    }

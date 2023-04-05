@@ -1096,7 +1096,8 @@ form input::placeholder, form textarea::placeholder {
   -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
           box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
   z-index: 300;
-  min-width: 320px;
+  min-width: 315px;
+  max-width: 500px;
   padding: 3rem;
 }
 .modal h3 {
@@ -1150,4 +1151,13 @@ form input::placeholder, form textarea::placeholder {
 
 .modal--close {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .modal__content p {
+    display: none;
+  }
+  .modal__form {
+    margin: 1rem auto 0;
+  }
 }
