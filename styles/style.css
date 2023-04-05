@@ -1089,8 +1089,8 @@ form input::placeholder, form textarea::placeholder {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
   background-color: #fff;
   border-radius: 1rem;
   -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
@@ -1099,6 +1099,7 @@ form input::placeholder, form textarea::placeholder {
 }
 .modal h3 {
   padding: 1rem 0;
+  font-weight: 700;
 }
 .modal i {
   float: right;
