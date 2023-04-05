@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modal');
     const exitTop = document.querySelector('.modal--exit');
     const exitBottom = document.querySelector('.modal--action p');
-    const submitSignUp = document.querySelector('.modal--action button');
+    const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     
@@ -62,8 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     exitTop.addEventListener('click', closeModal);
     exitBottom.addEventListener('click', closeModal);
 
-    submitSignUp.addEventListener('click', function(e){
-        
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        console.log(e, 'yayayyay');
+
         if(nameInput.value && emailInput.value){
            closeModal();
            //prevents default submit behavior: reload

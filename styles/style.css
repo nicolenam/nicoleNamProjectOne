@@ -1108,6 +1108,7 @@ form input::placeholder, form textarea::placeholder {
   position: absolute;
   right: 20px;
   top: 20px;
+  cursor: pointer;
 }
 .modal__form {
   width: 100%;
