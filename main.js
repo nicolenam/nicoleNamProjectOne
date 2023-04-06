@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     //this is a fix for modal showing anywhere on page after a refresh
 
-    // 1) ADD ITEMS TO SHOPPING BAG
+    // 1) ADD ITEMS TO SHOPPING BAG --might not need for loop if i select the parent ...but it is not inside a tag like ul... think about. it later
+
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
 
-    //click any bag in Featured sale section to increment number in numOfItems
+    //click any bag in Featured sale section to increment number in numOfItems  
 
         for(let i = 0; i < bag.length; i++){
 
@@ -68,20 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3) HAMBURGER MENU 
 
     // detect click on hamburger
+    //TRY TOGGLING WITH THE NEW FONT AWESOME LINK DIRECTLY ON I TAG
     const hamburgerIcon = document.querySelector('span > .fa-bars').parentElement;
     const closeIcon = document.querySelector('span > .fa-times').parentElement;
-    const hamburgerMenu = document.querySelector('.nav__hamburger')
+    const hamburgerMenu = document.querySelector('.nav__hamburger');
 
-    hamburgerIcon.addEventListener('click', function(){
+    hamburgerIcon.addEventListener('click', mobileMenuToggle);
+
+    closeIcon.addEventListener('click', mobileMenuToggle);
+
+    function mobileMenuToggle(){
         hamburgerMenu.classList.toggle('show');
-        hamburgerIcon.classList.toggle('close-mobile');
         closeIcon.classList.toggle('close-mobile');
-    } );
-
-    closeIcon.addEventListener('click',
-    )
-
-
+        hamburgerIcon.classList.toggle('close-mobile');
+    };
 
     
 
