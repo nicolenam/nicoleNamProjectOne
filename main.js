@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
 
-    //displays nodeList in an array
-    console.log(bag);
-
     //click any bag in Featured sale section to increment number in numOfItems
 
         for(let i = 0; i < bag.length; i++){
@@ -40,10 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
-    
-    console.log(nameInput.value);
-    console.log(emailInput.value);
-
 
     //disable scroll initially for modal + overlay styles  
     window.onload = () =>{
@@ -51,10 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const closeModal = () =>{
-        //close modal and remove overlay by adding 'modal--close' class
         modal.className = 'modal--close';
         overlay.className = 'modal--close';
-        //remove the class 'no-scroll'
         body.className = ''; 
     }
 
@@ -64,13 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
-        console.log(e, 'yayayyay');
 
         if(nameInput.value && emailInput.value){
            closeModal();
-           //prevents default submit behavior: reload
-           e.preventDefault();
-           //clear input value 
            nameInput.value = '';
            emailInput.value = '';
         }
