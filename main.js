@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeIcon = document.querySelector('.fa-times');
 
     hamburgerIcon.addEventListener('click', function(){
-        closeIcon.classList.toggle('close-mobile');
+        // closeIcon.classList.toggle('close-mobile');
         hamburgerMenu.classList.toggle('show');
     } );
 
