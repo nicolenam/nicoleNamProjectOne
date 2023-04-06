@@ -29,40 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 2) MODAL INTERACTION
-    // const body = document.querySelector('body');
-    // const overlay = document.querySelector('.overlay');
-    // const modal = document.querySelector('.modal');
-    // const exitTop = document.querySelector('.modal--exit');
-    // const exitBottom = document.querySelector('.modal--action p');
-    // const form = document.querySelector('form');
-    // const nameInput = document.getElementById('name');
-    // const emailInput = document.getElementById('email');
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.overlay');
+    const modal = document.querySelector('.modal');
+    const exitTop = document.querySelector('.modal--exit');
+    const exitBottom = document.querySelector('.modal--action p');
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
 
-    // //disable scroll initially for modal + overlay styles  
-    // window.onload = () =>{
-    //     body.className = 'no-scroll';
-    // }
+    //disable scroll initially for modal + overlay styles  
+    window.onload = () =>{
+        body.className = 'no-scroll';
+    }
 
-    // const closeModal = () =>{
-    //     modal.className = 'modal--close';
-    //     overlay.className = 'modal--close';
-    //     body.className = ''; 
-    // }
+    const closeModal = () =>{
+        modal.className = 'modal--close';
+        overlay.className = 'modal--close';
+        body.className = ''; 
+    }
 
-    // //call 'closeModal' function when click is detected
-    // exitTop.addEventListener('click', closeModal);
-    // exitBottom.addEventListener('click', closeModal);
+    //call 'closeModal' function when click is detected
+    exitTop.addEventListener('click', closeModal);
+    exitBottom.addEventListener('click', closeModal);
 
-    // form.addEventListener('submit', function(e){
-    //     e.preventDefault();
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
 
-    //     if(nameInput.value && emailInput.value){
-    //        closeModal();
-    //        nameInput.value = '';
-    //        emailInput.value = '';
-    //     }
+        if(nameInput.value && emailInput.value){
+           closeModal();
+           nameInput.value = '';
+           emailInput.value = '';
+        }
 
-    // });
+    });
     
     
     // 3) HAMBURGER MENU 
