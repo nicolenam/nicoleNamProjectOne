@@ -345,6 +345,13 @@ html {
 .nav__mobile__icons {
   display: none;
 }
+.nav__hamburger {
+  display: none;
+  text-align: center;
+}
+.nav__hamburger__items {
+  padding: 1rem 0;
+}
 
 @media (max-width: 700px) {
   .nav__mobile {
@@ -378,6 +385,9 @@ html {
   }
   .nav__desktop {
     display: none;
+  }
+  .nav__hamburger {
+    display: block;
   }
 }
 html {
