@@ -67,6 +67,7 @@
         
             &__icons{
                 display: none;
+                cursor: pointer;
             }
          
     }
@@ -77,11 +78,41 @@
 
         &__items{
             padding: 1rem 0;
+
+            a {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 5px;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0;
+                    transition: width
+                    .3s ease-in-out;
+                }
+
+                &:hover::after, &:focus::after{
+                    width: 50%;
+                    background-color: v.$color-primary;
+                }
+
+            }
+        
         }
     }
 }
 
+.close-mobile{
+    display: none;
+}
 
+.show{
+    display: block;
+}
 
 // MEDIA QUERY STARTS HERE 
 @media (max-width:700px){
@@ -114,10 +145,6 @@
 
     .nav__desktop{
         display: none;
-    }
-
-    .nav__hamburger{
-        display: block;
     }
 
 }
