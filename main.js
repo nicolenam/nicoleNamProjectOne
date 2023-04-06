@@ -68,15 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3) HAMBURGER MENU 
 
     // detect click on hamburger
-    const hamburgerIcon = document.querySelector('.fa-bars');
-    const hamburgerMenu = document.querySelector('.nav__hamburger');
-    const closeIcon = document.querySelector('.fa-times');
+    const hamburgerIcon = document.querySelector('span > .fa-bars').parentElement;
+    const closeIcon = document.querySelector('span > .fa-times').parentElement;
+    const hamburgerMenu = document.querySelector('.nav__hamburger')
 
     hamburgerIcon.addEventListener('click', function(){
-        // closeIcon.classList.toggle('close-mobile');
         hamburgerMenu.classList.toggle('show');
+        hamburgerIcon.classList.toggle('close-mobile');
+        closeIcon.classList.toggle('close-mobile');
     } );
 
+    closeIcon.addEventListener('click',
+    )
 
 
 
