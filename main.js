@@ -84,7 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.classList.toggle('close-mobile');
     };
 
+
+    // 4) I want to work on pop up modal for each product item next
     
+    //things i want to include are: 
+    // name of the prodcut
+    // quantity additional button 
+    // price 
+    // add to cart button 
+    // image of the product
 
 
   
