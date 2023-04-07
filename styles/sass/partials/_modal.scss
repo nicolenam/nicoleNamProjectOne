@@ -2,111 +2,98 @@
 @use "mixin" as m;
 
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -65%);
+  @include m.modal;
+
+  h3 {
+    padding: 1rem 0;
+    font-weight: v.$body-bold;
+  }
+
+  i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 3rem auto 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .modal__submit {
     background-color: v.$color-tertiary;
-    border-radius: 1rem;
-    box-shadow: 10px 5px 5px rgba(v.$color-secondary, .4);
-    z-index: 300;
-    min-width: 315px;
-    max-width: 500px;
-    padding: 3rem;
+    font-family: v.$font-main;
+    padding: 10px 35px;
+    border: 1px solid v.$color-primary;
+    font-size: 0.7rem;
+    width: 150px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-    h3{
-        padding: 1rem 0;
-        font-weight: v.$body-bold;
+    &:hover,
+    &:focus {
+      background-color: v.$color-primary;
+      color: v.$color-tertiary;
     }
+  }
 
-    i{
-      position: absolute;
-      right: 20px;
-      top: 20px;
+  &--action {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
       cursor: pointer;
     }
+  }
+}
 
-    &__form{
-        width: 100%;
-        margin: 3rem auto 0;
-    }
-    
-    input {
-        width: 100%;
-    }
+.overlay {
+  position: absolute;
+  background-color: rgba(v.$color-secondary, 0.4);
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
-    .modal__submit{
-      background-color: v.$color-tertiary;
-      font-family: v.$font-main;
-      padding: 10px 35px;
-      border: 1px solid v.$color-primary;
-      font-size: .7rem;
-      width: 150px;
-      margin-bottom: 0;
-      cursor: pointer;
-      transition: all .3s ease;
-      
-  
-      &:hover, &:focus{
-          background-color: v.$color-primary;
-          color: v.$color-tertiary;
+//STOPS THE SCROLL WHEN MODAL IS OPEN
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.modal--close {
+  display: none;
+}
+
+// MEDIA QUERY STARTS HERE
+@media (max-width: 700px) {
+  .modal {
+    &__content {
+      p {
+        display: none;
       }
     }
+    &__form {
+      margin: 1rem auto 0;
+    }
 
-    &--action{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-
-        p{
-            cursor: pointer;
-        }
+    p {
+      display: none;
+    }
+    .modal__submit {
+      width: 100%;
     }
   }
-
-  .overlay{
-    position: absolute;
-    background-color: rgba(v.$color-secondary, 0.4);
-    width: 100vw;
-    min-height: 100vh;
-    z-index: 200;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  //STOPS THE SCROLL WHEN MODAL IS OPEN
-  .no-scroll {
-    height: 100vh;
-    overflow-y: hidden;
-  }
-
-  .modal--close{
-    display:none;
-  }
-
-
-  // MEDIA QUERY STARTS HERE 
-    @media (max-width:700px){
-    .modal{
-        &__content{
-            p{
-                display: none;
-            }
-        }
-        &__form{
-        margin: 1rem auto 0;
-
-        }
-
-        p{
-          display: none;
-        }
-        .modal__submit{
-         width: 100%;
-          }
-    }
-    
-  }
+}

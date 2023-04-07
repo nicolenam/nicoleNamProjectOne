@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.className = 'modal--close';
         overlay.className = 'modal--close';
         body.className = ''; 
+        nameInput.value = '';
+        emailInput.value = '';
     }
 
     // call 'closeModal' function when click is detected
@@ -56,13 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
-
-        if(nameInput.value && emailInput.value){
-           closeModal();
-           nameInput.value = '';
-           emailInput.value = '';
-        }
-
+        closeModal();
     });
     
     
@@ -86,6 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 4) I want to work on pop up modal for each product item next
+
+    //when i click on the image of the product i want pop up 
+
+    //first, add the event listener to the image clicked in the grid. 
+
+    const gridElement = document.querySelector('.featured__grid');
+
+    console.log(gridElement);
+ 
+    gridElement.addEventListener('click', (e)=>{
+        console.log(e.target);
+    });
+
+    
     
     //things i want to include are: 
     // name of the prodcut
