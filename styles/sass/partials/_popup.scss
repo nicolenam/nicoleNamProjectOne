@@ -1,7 +1,14 @@
 @use "variables" as v;
 @use "mixin" as m;
 
-// .popup{
-//   @include m.modal;
+.popup{
+  @include m.modal;
 
-// }
+  img{
+    max-width: 100%;
+  }
+  i{
+    @include m.modal-exit;
+  }
+
+}

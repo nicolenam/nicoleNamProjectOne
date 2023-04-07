@@ -10,10 +10,7 @@
   }
 
   i {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
+    @include m.modal-exit;
   }
 
   &__form {
@@ -56,7 +53,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   background-color: rgba(v.$color-secondary, 0.4);
   width: 100vw;
   min-height: 100vh;

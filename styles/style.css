@@ -1185,7 +1185,7 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   background-color: rgba(102, 102, 102, 0.4);
   width: 100vw;
   min-height: 100vh;
@@ -1218,4 +1218,28 @@ form input::placeholder, form textarea::placeholder {
   .modal .modal__submit {
     width: 100%;
   }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
+          box-shadow: 10px 5px 5px rgba(102, 102, 102, 0.4);
+  z-index: 300;
+  min-width: 315px;
+  max-width: 500px;
+  padding: 3rem;
+}
+.popup img {
+  max-width: 100%;
+}
+.popup i {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
 }

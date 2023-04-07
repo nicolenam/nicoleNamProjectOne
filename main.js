@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //this is a fix for modal showing anywhere on page after a refresh
 
     // 1) ADD ITEMS TO SHOPPING BAG
-
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeModal = () =>{
         modal.className = 'modal--close';
-        overlay.className = 'modal--close';
+        overlay.classList.toggle('modal--close');
         body.className = ''; 
         nameInput.value = '';
         emailInput.value = '';
@@ -80,25 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 4) PRODUCT POP UP MODAL 
-
     const gridElement = document.querySelector('.featured__grid');
     const popupElement = document.querySelector('.popup');
+    const popupExitIcon = document.querySelector('.popup--exit');
+
+    popupExitIcon.addEventListener('click', ()=>{
+        popupElement.classList.toggle('modal--close');
+        body.classList.toggle('no-scroll');
+        overlay.classList.toggle('modal--close');
+    })
 
     gridElement.addEventListener('click', (e)=>{
 
         getPrice(e.target.parentElement.parentElement);
+        body.classList.toggle('no-scroll');
+        popupElement.classList.toggle('modal--close');
+        overlay.classList.toggle('modal--close');
 
         const imgSrc = e.target.src;
         const productName = e.target.alt;
-        const productElement = document.createElement('p');
+        let productElement = popupElement.querySelector('p');
         let imageElement = popupElement.querySelector('img');
+
         
-        if(!imageElement){
+        if(!imageElement && !productElement){
+    
             imageElement = document.createElement('img');
             popupElement.appendChild(imageElement);
-        }else{
-            imageElement.setAttribute('src', imgSrc);
+            productElement = document.createElement('p');
+            popupElement.appendChild(productElement);
+            
         }
+            productElement.innerHTML = productName;
+            imageElement.setAttribute('src', imgSrc);
   
     });
 
@@ -108,11 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(price);
     }
     
-
+   
     // quantity additional button '+ -'
     // add to cart button 
    
 
+
+    //5) filter featured section sale new regular 
 
   
 
