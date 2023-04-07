@@ -99,13 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const imgSrc = e.target.src;
         const productName = e.target.alt;
-        const imageElement = document.createElement('img');
         const productElement = document.createElement('p');
+        let imageElement = popupElement.querySelector('img');
+        
+        if(!imageElement){
+            imageElement = document.createElement('img');
+            popupElement.appendChild(imageElement);
+        }else{
+            imageElement.setAttribute('src', imgSrc);
+        }
 
-        imageElement.setAttribute('src', imgSrc);
-        console.log(imageElement);
 
-        popupElement.appendChild(imageElement);
   
     });
 
