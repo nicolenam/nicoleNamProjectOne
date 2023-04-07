@@ -35,6 +35,24 @@
         width: 100%;
     }
 
+    .modal__submit{
+      background-color: v.$color-tertiary;
+      font-family: v.$font-main;
+      padding: 10px 35px;
+      border: 1px solid v.$color-primary;
+      font-size: .7rem;
+      width: 150px;
+      margin-bottom: 0;
+      cursor: pointer;
+      transition: all .3s ease;
+      
+  
+      &:hover, &:focus{
+          background-color: v.$color-primary;
+          color: v.$color-tertiary;
+      }
+    }
+
     &--action{
         width: 100%;
         display: flex;
@@ -82,6 +100,13 @@
         margin: 1rem auto 0;
 
         }
+
+        p{
+          display: none;
+        }
+        .modal__submit{
+         width: 100%;
+          }
     }
     
-    }
+  }

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
 
-    //disable scroll initially for modal + overlay styles  
+    // disable scroll initially for modal + overlay styles  
     window.onload = () =>{
         body.className = 'no-scroll';
     }
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.className = ''; 
     }
 
-    //call 'closeModal' function when click is detected
+    // call 'closeModal' function when click is detected
     exitTop.addEventListener('click', closeModal);
     exitBottom.addEventListener('click', closeModal);
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3) HAMBURGER MENU 
 
     // detect click on hamburger
-    //TRY TOGGLING WITH THE NEW FONT AWESOME LINK DIRECTLY ON I TAG
+    // cannot toggle class directly to the <i> **
     const hamburgerIcon = document.querySelector('span > .fa-bars').parentElement;
     const closeIcon = document.querySelector('span > .fa-times').parentElement;
     const hamburgerMenu = document.querySelector('.nav__hamburger');
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     //things i want to include are: 
     // name of the prodcut
-    // quantity additional button 
+    // quantity additional button '+ -'
     // price 
     // add to cart button 
     // image of the product

@@ -1152,6 +1152,22 @@ form input::placeholder, form textarea::placeholder {
 .modal input {
   width: 100%;
 }
+.modal .modal__submit {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 35px;
+  border: 1px solid #333;
+  font-size: 0.7rem;
+  width: 150px;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.modal .modal__submit:hover, .modal .modal__submit:focus {
+  background-color: #333;
+  color: #fff;
+}
 .modal--action {
   width: 100%;
   display: -webkit-box;
@@ -1195,5 +1211,11 @@ form input::placeholder, form textarea::placeholder {
   }
   .modal__form {
     margin: 1rem auto 0;
+  }
+  .modal p {
+    display: none;
+  }
+  .modal .modal__submit {
+    width: 100%;
   }
 }
