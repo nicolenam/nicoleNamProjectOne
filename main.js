@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 4) PRODUCT POP UP MODAL 
-    const gridElement = document.querySelector('.featured__grid');
+    const gridElement = document.querySelectorAll('.featured__grid a img');
+
     const popupElement = document.querySelector('.popup');
     const popupExitIcon = document.querySelector('.popup--exit');
 
@@ -89,12 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.toggle('modal--close');
     })
 
-    gridElement.addEventListener('click', (e)=>{
 
-        createPopup(e.target);
-        closePopUp();
-        // getPrice(e.target.parentElement.parentElement);
-    });
+    for(let i = 0; i < gridElement.length; i++){
+        gridElement[i].addEventListener('click', (e)=>{
+
+            createPopup(e.target);
+            closePopUp();
+            // getPrice(e.target.parentElement.parentElement);
+        });
+    
+    }
+
 
 
     function createPopup(e){
