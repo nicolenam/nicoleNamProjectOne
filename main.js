@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     //this is a fix for modal showing anywhere on page after a refresh
 
-    // 1) ADD ITEMS TO SHOPPING BAG --might not need for loop if i select the parent ...but it is not inside a tag like ul... think about. it later
+    // 1) ADD ITEMS TO SHOPPING BAG
 
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
@@ -64,14 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 3) HAMBURGER MENU 
 
-    // detect click on hamburger
     // cannot toggle class directly to the <i> **
     const hamburgerIcon = document.querySelector('span > .fa-bars').parentElement;
     const closeIcon = document.querySelector('span > .fa-times').parentElement;
     const hamburgerMenu = document.querySelector('.nav__hamburger');
 
     hamburgerIcon.addEventListener('click', mobileMenuToggle);
-
     closeIcon.addEventListener('click', mobileMenuToggle);
 
     function mobileMenuToggle(){
@@ -81,16 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // 4) I want to work on pop up modal for each product item next
-
-    //when i click on the image of the product i want pop up 
-
-    //first, add the event listener to the image clicked in the grid. 
+    // 4) PRODUCT POP UP MODAL 
 
     const gridElement = document.querySelector('.featured__grid');
     const popupElement = document.querySelector('.popup');
-    //create elements in here.
-
 
     gridElement.addEventListener('click', (e)=>{
 
@@ -108,11 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }else{
             imageElement.setAttribute('src', imgSrc);
         }
-
-
   
     });
 
+    
     function getPrice(e){
         console.log(e);
         const price = e.querySelector('.product__price p:last-child').innerHTML;
