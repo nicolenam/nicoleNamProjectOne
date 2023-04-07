@@ -96,8 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         getPrice(e.target.parentElement.parentElement);
 
+
         const imgSrc = e.target.src;
         const productName = e.target.alt;
+        const imageElement = document.createElement('img');
+        const productElement = document.createElement('p');
+
+        imageElement.setAttribute('src', imgSrc);
+        console.log(imageElement);
+
+        popupElement.appendChild(imageElement);
   
     });
 
