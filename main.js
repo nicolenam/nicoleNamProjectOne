@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getPrice(e){
         console.log(e);
-        const price = e.querySelector('.product__price p').innerHTML;
+        const price = e.querySelector('.product__price p:last-child').innerHTML;
         console.log(price);
     }
     
