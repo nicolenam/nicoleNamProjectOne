@@ -88,21 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
     //first, add the event listener to the image clicked in the grid. 
 
     const gridElement = document.querySelector('.featured__grid');
+    const popupElement = document.querySelector('.popup');
+    //create elements in here.
 
-    console.log(gridElement);
- 
+
     gridElement.addEventListener('click', (e)=>{
-        console.log(e.target);
+
+        getPrice(e.target.parentElement.parentElement);
+
+        const imgSrc = e.target.src;
+        const productName = e.target.alt;
+  
     });
 
+    function getPrice(e){
+        console.log(e);
+        const price = e.querySelector('.product__price p').innerHTML;
+        console.log(price);
+    }
     
-    
-    //things i want to include are: 
-    // name of the prodcut
+
+
+  
     // quantity additional button '+ -'
-    // price 
     // add to cart button 
-    // image of the product
+   
 
 
   
