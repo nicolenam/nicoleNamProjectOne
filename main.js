@@ -91,17 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gridElement.addEventListener('click', (e)=>{
 
-        getPrice(e.target.parentElement.parentElement);
-        body.classList.toggle('no-scroll');
-        popupElement.classList.toggle('modal--close');
-        overlay.classList.toggle('modal--close');
+        createPopup(e.target);
+        closePopUp();
+        // getPrice(e.target.parentElement.parentElement);
+    });
 
-        const imgSrc = e.target.src;
-        const productName = e.target.alt;
+
+    function createPopup(e){
+        const imgSrc = e.src;
+        const productName = e.alt;
         let productElement = popupElement.querySelector('p');
         let imageElement = popupElement.querySelector('img');
 
-        
         if(!imageElement && !productElement){
     
             imageElement = document.createElement('img');
@@ -113,14 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
             productElement.innerHTML = productName;
             imageElement.setAttribute('src', imgSrc);
   
-    });
+    }
 
-    function getPrice(e){
-        console.log(e);
-        const price = e.querySelector('.product__price p:last-child').innerHTML;
-        console.log(price);
+
+    function closePopUp(){
+        body.classList.toggle('no-scroll');
+        popupElement.classList.toggle('modal--close');
+        overlay.classList.toggle('modal--close');
     }
     
+    
+    // function getPrice(e){
+    //     console.log(e);
+    //     const price = e.querySelector('.product__price p:last-child').innerHTML;
+    //     console.log(price);
+    // }
+
    
     // quantity additional button '+ -'
     // add to cart button 
