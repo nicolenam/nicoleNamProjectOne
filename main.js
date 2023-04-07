@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-    // 2) MODAL INTERACTION
+    // 2) NEWSLETER SIGN UP MODAL
     const body = document.querySelector('body');
     const overlay = document.querySelector('.overlay');
     const modal = document.querySelector('.modal');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 3) HAMBURGER MENU 
 
-    // cannot toggle class directly to the <i> **
+    // need a fix::cannot toggle class directly to the <i> **
     const hamburgerIcon = document.querySelector('span > .fa-bars').parentElement;
     const closeIcon = document.querySelector('span > .fa-times').parentElement;
     const hamburgerMenu = document.querySelector('.nav__hamburger');
@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         getPrice(e.target.parentElement.parentElement);
 
-
         const imgSrc = e.target.src;
         const productName = e.target.alt;
         const productElement = document.createElement('p');
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     });
 
-    
     function getPrice(e){
         console.log(e);
         const price = e.querySelector('.product__price p:last-child').innerHTML;
@@ -111,8 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
-
-  
     // quantity additional button '+ -'
     // add to cart button 
    
