@@ -1237,9 +1237,61 @@ form input::placeholder, form textarea::placeholder {
 .popup img {
   max-width: 100%;
 }
+.popup button {
+  background: #fff;
+  border: 1px solid #333;
+  font-size: 0.7rem;
+  padding: 15px 30px;
+  cursor: pointer;
+}
 .popup i {
   position: absolute;
   right: 20px;
   top: 20px;
   cursor: pointer;
+}
+.popup__content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 3px;
+}
+.popup__quantity--adjust {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  border: 1px solid black;
+  width: 100px -webkit-fit-content;
+  width: 100px -moz-fit-content;
+  width: 100px fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.popup-product {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  padding-top: 2rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 400;
 }

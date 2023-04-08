@@ -4,11 +4,62 @@
 .popup{
   @include m.modal;
 
+
+
+
   img{
     max-width: 100%;
   }
+
+  button{
+    @include m.btn;
+  }
+
   i{
     @include m.modal-exit;
   }
+
+
+  &__content{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 3px;
+  }
+
+  &__quantity{
+    
+      &--adjust{
+        display: flex;
+        padding: 10px;
+        border: 1px solid black;
+        width: 100px fit-content;
+        width: fit-content;
+        gap: 20px;
+        cursor: pointer;
+      }
+
+  }
+
+}
+
+.popup-product{
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+  position: absolute;
+  top: 0;
+  padding-top: 2rem;
+
+}
+
+.price{
+  font-size: 1rem;
+  font-weight: 400;
 
 }

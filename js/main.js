@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4) PRODUCT POP UP MODAL 
     const gridElement = document.querySelectorAll('.featured__grid a img');
-
     const popupElement = document.querySelector('.popup');
     const popupExitIcon = document.querySelector('.popup--exit');
+    let price;
 
     popupExitIcon.addEventListener('click', ()=>{
         popupElement.classList.toggle('modal--close');
@@ -94,32 +94,38 @@ document.addEventListener('DOMContentLoaded', () => {
     for(let i = 0; i < gridElement.length; i++){
         gridElement[i].addEventListener('click', (e)=>{
 
-            createPopup(e.target);
+            createPopup(e.target, e.target.parentElement.parentElement);
             closePopUp();
-            // getPrice(e.target.parentElement.parentElement);
         });
     
     }
 
-
-
-    function createPopup(e){
+    function createPopup(e, price){
         const imgSrc = e.src;
         const productName = e.alt;
-        let productElement = popupElement.querySelector('p');
+        let productElement = popupElement.querySelector('.popup-product');
         let imageElement = popupElement.querySelector('img');
+        let priceElement = popupElement.querySelector('.price');
 
-        if(!imageElement && !productElement){
+        if(!imageElement && !productElement && !priceElement){
     
             imageElement = document.createElement('img');
             popupElement.appendChild(imageElement);
+            
             productElement = document.createElement('p');
+            productElement.classList.add('popup-product');
             popupElement.appendChild(productElement);
             
+            priceElement = document.createElement('p');
+            priceElement.classList.add('price');
+            popupElement.appendChild(priceElement);
+            
         }
-            productElement.innerHTML = productName;
-            imageElement.setAttribute('src', imgSrc);
-  
+        
+        productElement.innerHTML = productName;
+        imageElement.setAttribute('src', imgSrc);
+        priceElement.innerHTML = price.querySelector('.product__price p:last-child').innerHTML;
+        
     }
 
 
@@ -129,14 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.toggle('modal--close');
     }
     
-    
-    // function getPrice(e){
-    //     console.log(e);
-    //     const price = e.querySelector('.product__price p:last-child').innerHTML;
-    //     console.log(price);
-    // }
-
-   
     // quantity additional button '+ -'
     // add to cart button 
    
