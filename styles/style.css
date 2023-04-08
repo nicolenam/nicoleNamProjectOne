@@ -1243,6 +1243,7 @@ form input::placeholder, form textarea::placeholder {
   font-size: 0.7rem;
   padding: 15px 30px;
   cursor: pointer;
+  padding: 10px;
 }
 .popup i {
   position: absolute;
@@ -1284,7 +1285,7 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .popup-product {
-  font-size: 1.5rem;
+  font-size: 100%;
   font-weight: 700;
   position: absolute;
   top: 0;
@@ -1292,6 +1293,5 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .price {
-  font-size: 1rem;
   font-weight: 400;
 }

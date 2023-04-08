@@ -4,15 +4,13 @@
 .popup{
   @include m.modal;
 
-
-
-
   img{
     max-width: 100%;
   }
 
   button{
     @include m.btn;
+    padding: 10px;
   }
 
   i{
@@ -43,13 +41,13 @@
         gap: 20px;
         cursor: pointer;
       }
-
   }
+
 
 }
 
 .popup-product{
-  font-size: 1.5rem;
+  font-size: 100%;
   font-weight: 700;
   
   position: absolute;
@@ -59,7 +57,5 @@
 }
 
 .price{
-  font-size: 1rem;
   font-weight: 400;
-
 }

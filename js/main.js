@@ -124,21 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         productElement.innerHTML = productName;
         imageElement.setAttribute('src', imgSrc);
-        priceElement.innerHTML = price.querySelector('.product__price p:last-child').innerHTML;
+        priceElement.innerHTML = `Price: ${price.querySelector('.product__price p:last-child').innerHTML}`;
+
         
     }
-
 
     function closePopUp(){
         body.classList.toggle('no-scroll');
         popupElement.classList.toggle('modal--close');
         overlay.classList.toggle('modal--close');
     }
-    
-    // quantity additional button '+ -'
-    // add to cart button 
-   
-
 
     //5) filter featured section sale new regular 
 
