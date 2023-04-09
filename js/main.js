@@ -85,18 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridElement = document.querySelectorAll('.featured__grid a img');
     const popupElement = document.querySelector('.popup');
     const popupExitIcon = document.querySelector('.popup--exit');
-    let adjustNumber = 0;
-
-
-    popupExitIcon.addEventListener('click', ()=>{
-        popupElement.classList.toggle('modal--close');
-        body.classList.toggle('no-scroll');
-        overlay.classList.toggle('modal--close');
-        addToCartdisplay.innerHTML = 0;
-        // adjustNumber = 0;
-        // addNumber = 0;
-    })
-
 
     for(let i = 0; i < gridElement.length; i++){
         gridElement[i].addEventListener('click', (e)=>{
@@ -140,42 +128,66 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtractProduct = document.querySelector('.subtract');
     const addToCartdisplay = document.querySelector('.addToCart');
     const addToCartBtn = document.querySelector('.addCartBtn');
+    let displayNumber = 0;
+    addToCartdisplay.innerHTML = displayNumber;
 
     addProduct.addEventListener('click', ()=>{
         addNumber++;
-        adjustNumber++;
-        console.log(addNumber);
+        displayNumber++;
+        // console.log('addNumber', addNumber);
+        // console.log('display number', displayNumber);
         cartNumDisplay();
     });
 
     subtractProduct.addEventListener('click', ()=>{
-        if(addNumber){
+        if(addNumber && displayNumber){
             addNumber--;
-            adjustNumber--;
+            displayNumber--;
             cartNumDisplay();
         };
+        // console.log('addNumber', addNumber);
+        // console.log('display number', displayNumber);
     });
     
     function cartNumDisplay(){
-        addToCartdisplay.innerHTML = adjustNumber;
+        addToCartdisplay.innerHTML = displayNumber;
     };
+
+    function closePopUp(){
+        body.classList.toggle('no-scroll');
+        popupElement.classList.toggle('modal--close');
+        overlay.classList.toggle('modal--close')
+
+    }
 
     addToCartBtn.addEventListener('click', ()=>{
 
-        console.log(addNumber);
         displayNum.innerHTML = addNumber + numOfItems;
-        addToCartdisplay.innerHTML = 0;
-        closePopUp();
+        submitItem();
 
     });
 
-    function closePopUp(){
-        adjustNumber = 0;
-        console.log(numOfItems);
-        body.classList.toggle('no-scroll');
-        popupElement.classList.toggle('modal--close');
-        overlay.classList.toggle('modal--close');
+    function submitItem(){
+        console.log('addNumber', addNumber);
+        console.log('display number', displayNumber);
+        displayNumber = 0;
+        addToCartdisplay.innerHTML = displayNumber;
     }
+
+    popupExitIcon.addEventListener('click', ()=>{
+        console.log('addNumber', addNumber);
+        console.log('display number', displayNumber);
+        popupElement.classList.toggle('modal--close');
+        body.classList.toggle('no-scroll');
+        overlay.classList.toggle('modal--close');
+        addNumber = addNumber-displayNumber;
+        displayNumber = 0;
+        addToCartdisplay.innerHTML = displayNumber;
+        console.log('addNumber', addNumber);
+        console.log('display number', displayNumber);
+
+    });
+
 
     //5) filter featured section sale new regular 
 
