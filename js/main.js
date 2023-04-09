@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bag = document.querySelectorAll('.product__container img');
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
+    let addNumber = 0;
 
     //click any bag in Featured sale section to increment number in numOfItems  
 
@@ -16,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //added click event to all the bags
             bag[i].addEventListener('click', function(){
+                console.log(addNumber);
 
             //for each click event: increment numOfItems
             numOfItems++;
+            const totalNumber = numOfItems + addNumber;
 
             //append the numOfItems to displayNum
-            displayNum.innerHTML = numOfItems;
+            displayNum.innerHTML = totalNumber;
         
             }); 
 
@@ -82,11 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridElement = document.querySelectorAll('.featured__grid a img');
     const popupElement = document.querySelector('.popup');
     const popupExitIcon = document.querySelector('.popup--exit');
+    let adjustNumber = 0;
+
 
     popupExitIcon.addEventListener('click', ()=>{
         popupElement.classList.toggle('modal--close');
         body.classList.toggle('no-scroll');
         overlay.classList.toggle('modal--close');
+        addToCartdisplay.innerHTML = 0;
+        // adjustNumber = 0;
+        // addNumber = 0;
     })
 
 
@@ -128,21 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
-    function closePopUp(){
-        body.classList.toggle('no-scroll');
-        popupElement.classList.toggle('modal--close');
-        overlay.classList.toggle('modal--close');
-    }
-
-
     const addProduct = document.querySelector('.add');
     const subtractProduct = document.querySelector('.subtract');
     const addToCartdisplay = document.querySelector('.addToCart');
     const addToCartBtn = document.querySelector('.addCartBtn');
-    let addNumber = 0;
 
     addProduct.addEventListener('click', ()=>{
         addNumber++;
+        adjustNumber++;
         console.log(addNumber);
         cartNumDisplay();
     });
@@ -150,17 +151,31 @@ document.addEventListener('DOMContentLoaded', () => {
     subtractProduct.addEventListener('click', ()=>{
         if(addNumber){
             addNumber--;
+            adjustNumber--;
             cartNumDisplay();
         };
     });
     
     function cartNumDisplay(){
-        addToCartdisplay.innerHTML = addNumber;
+        addToCartdisplay.innerHTML = adjustNumber;
     };
 
     addToCartBtn.addEventListener('click', ()=>{
-  console.log('add this to the numofitems');
+
+        console.log(addNumber);
+        displayNum.innerHTML = addNumber + numOfItems;
+        addToCartdisplay.innerHTML = 0;
+        closePopUp();
+
     });
+
+    function closePopUp(){
+        adjustNumber = 0;
+        console.log(numOfItems);
+        body.classList.toggle('no-scroll');
+        popupElement.classList.toggle('modal--close');
+        overlay.classList.toggle('modal--close');
+    }
 
     //5) filter featured section sale new regular 
 
