@@ -1244,6 +1244,12 @@ form input::placeholder, form textarea::placeholder {
   padding: 15px 30px;
   cursor: pointer;
   padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.popup button:hover, .popup button:focus {
+  background: #333;
+  color: #fff;
 }
 .popup i {
   position: absolute;
@@ -1251,11 +1257,15 @@ form input::placeholder, form textarea::placeholder {
   top: 20px;
   cursor: pointer;
 }
+.popup span {
+  font-weight: 400;
+  font-size: 0.7rem;
+}
 .popup__content {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 2rem;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,17 +1273,17 @@ form input::placeholder, form textarea::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 3px;
 }
 .popup__quantity--adjust {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
-  border: 1px solid black;
+  padding: 5px;
+  border: 1px solid lightgray;
   width: 100px -webkit-fit-content;
   width: 100px -moz-fit-content;
   width: 100px fit-content;
@@ -1285,7 +1295,7 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .popup-product {
-  font-size: 100%;
+  font-size: 1.5rem;
   font-weight: 700;
   position: absolute;
   top: 0;
@@ -1293,5 +1303,6 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .price {
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 1rem;
 }

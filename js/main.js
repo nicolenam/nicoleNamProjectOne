@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridElement = document.querySelectorAll('.featured__grid a img');
     const popupElement = document.querySelector('.popup');
     const popupExitIcon = document.querySelector('.popup--exit');
-    let price;
 
     popupExitIcon.addEventListener('click', ()=>{
         popupElement.classList.toggle('modal--close');
@@ -120,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
             priceElement.classList.add('price');
             popupElement.appendChild(priceElement);
             
-        }
+        };
         
         productElement.innerHTML = productName;
         imageElement.setAttribute('src', imgSrc);
-        priceElement.innerHTML = `Price: ${price.querySelector('.product__price p:last-child').innerHTML}`;
+        priceElement.innerHTML = `<span>Price</span> </br> ${price.querySelector('.product__price p:last-child').innerHTML}`;
 
         
     }
@@ -134,6 +133,34 @@ document.addEventListener('DOMContentLoaded', () => {
         popupElement.classList.toggle('modal--close');
         overlay.classList.toggle('modal--close');
     }
+
+
+    const addProduct = document.querySelector('.add');
+    const subtractProduct = document.querySelector('.subtract');
+    const addToCartdisplay = document.querySelector('.addToCart');
+    const addToCartBtn = document.querySelector('.addCartBtn');
+    let addNumber = 0;
+
+    addProduct.addEventListener('click', ()=>{
+        addNumber++;
+        console.log(addNumber);
+        cartNumDisplay();
+    });
+
+    subtractProduct.addEventListener('click', ()=>{
+        if(addNumber){
+            addNumber--;
+            cartNumDisplay();
+        };
+    });
+    
+    function cartNumDisplay(){
+        addToCartdisplay.innerHTML = addNumber;
+    };
+
+    addToCartBtn.addEventListener('click', ()=>{
+  console.log('add this to the numofitems');
+    });
 
     //5) filter featured section sale new regular 
 
