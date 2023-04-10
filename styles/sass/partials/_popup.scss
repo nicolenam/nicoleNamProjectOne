@@ -32,7 +32,7 @@
   &__content{
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     padding: 3rem;
 
     display: flex;
@@ -69,5 +69,6 @@
 
 .price{
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  float: right;
 }

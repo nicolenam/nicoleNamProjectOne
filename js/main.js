@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupExitIcon = document.querySelector('.popup--exit');
 
     for(let i = 0; i < gridElement.length; i++){
-        gridElement[i].addEventListener('click', (e)=>{
 
+        gridElement[i].addEventListener('click', (e)=>{
             createPopup(e.target, e.target.parentElement.parentElement);
             closePopUp();
         });
@@ -124,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
+    //Adding product to shopping bag using pop up modal
+    
     const addProduct = document.querySelector('.add');
     const subtractProduct = document.querySelector('.subtract');
     const addToCartdisplay = document.querySelector('.addToCart');
