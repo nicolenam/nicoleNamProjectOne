@@ -134,8 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addProduct.addEventListener('click', ()=>{
         addNumber++;
         displayNumber++;
-        // console.log('addNumber', addNumber);
-        // console.log('display number', displayNumber);
         cartNumDisplay();
     });
 
@@ -145,8 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
             displayNumber--;
             cartNumDisplay();
         };
-        // console.log('addNumber', addNumber);
-        // console.log('display number', displayNumber);
     });
     
     function cartNumDisplay(){
@@ -161,31 +157,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     addToCartBtn.addEventListener('click', ()=>{
-
         displayNum.innerHTML = addNumber + numOfItems;
         submitItem();
-
     });
 
     function submitItem(){
-        console.log('addNumber', addNumber);
-        console.log('display number', displayNumber);
         displayNumber = 0;
         addToCartdisplay.innerHTML = displayNumber;
     }
 
     popupExitIcon.addEventListener('click', ()=>{
-        console.log('addNumber', addNumber);
-        console.log('display number', displayNumber);
         popupElement.classList.toggle('modal--close');
         body.classList.toggle('no-scroll');
         overlay.classList.toggle('modal--close');
         addNumber = addNumber-displayNumber;
         displayNumber = 0;
         addToCartdisplay.innerHTML = displayNumber;
-        console.log('addNumber', addNumber);
-        console.log('display number', displayNumber);
-
     });
 
 
