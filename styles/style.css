@@ -923,6 +923,9 @@ a {
   font-weight: 400;
   font-size: 0.8rem;
 }
+.footer__column span {
+  display: none;
+}
 .footer__column .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -998,42 +1001,26 @@ a {
   }
 }
 @media (max-width: 650px) {
-  .footer {
-    text-align: center;
-    font-size: 1rem;
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
   }
-  .footer__logo {
-    margin: 1rem auto;
+  .footer__column span {
+    display: inline;
+    padding-left: 10px;
+    cursor: pointer;
   }
   .footer--about {
+    padding: 1rem 0;
+  }
+  .contact ul {
     display: none;
   }
-  .footer__column .social-channels {
+  .profile ul {
     display: none;
-  }
-  .footer__column label {
-    font-size: 0.9rem;
-  }
-  .footer__container {
-    display: block;
-  }
-  .footer__container .profile {
-    display: none;
-  }
-  .footer__container .hide-content {
-    display: none;
-  }
-  .footer ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 .contact-hero {
@@ -1296,7 +1283,7 @@ form input::placeholder, form textarea::placeholder {
 }
 
 .popup-product {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   position: absolute;
   top: 0;
