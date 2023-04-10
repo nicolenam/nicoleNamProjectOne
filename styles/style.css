@@ -1082,6 +1082,7 @@ form .sub-btn {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  width: auto;
 }
 form .sub-btn:hover, form .sub-btn:focus {
   background-color: #333;
@@ -1158,7 +1159,7 @@ form input::placeholder, form textarea::placeholder {
   padding: 10px 35px;
   border: 1px solid #333;
   font-size: 0.7rem;
-  width: 150px;
+  width: auto;
   margin-bottom: 0;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
