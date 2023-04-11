@@ -13,4 +13,48 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.classList.toggle('close-mobile');
     };
 
+
+
+      // Accordion style footer
+
+      const plusIcons = document.querySelectorAll('.fa-plus');
+      const minusIcons = document.querySelectorAll('.fa-minus');
+      const accordionElement = document.querySelectorAll('.accordion');
+  
+      //when plusIcon is clicked, toggle .contact and .profile and disply minusIcon
+  
+      const toggleClass = (element, className)=>{
+          element.classList.toggle(className);
+      }
+  
+      plusIcons.forEach((plusIcon, index) =>{
+         
+          plusIcon.addEventListener('click', ()=>{
+              
+              toggleClass(accordionElement[index], 'accordion');
+              toggleClass(minusIcons[index].parentElement, 'show');
+              toggleClass(plusIcon.parentElement, 'show');
+        
+          })
+  
+      });
+  
+      minusIcons.forEach((minusIcon, index) =>{
+         
+          minusIcon.addEventListener('click', ()=>{
+              
+              toggleClass(accordionElement[index], 'accordion');
+              toggleClass(plusIcons[index].parentElement, 'show');
+              toggleClass(minusIcon.parentElement, 'show');
+        
+          })
+  
+      });
+  
+  
+  
+  
+  
+  
+
 });
