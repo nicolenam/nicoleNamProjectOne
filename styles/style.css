@@ -1008,6 +1008,9 @@ a {
     -webkit-gap: 20px;
     -moz-gap: 20px;
   }
+  .footer__column .show {
+    display: none;
+  }
   .footer__column span {
     display: inline;
     padding-left: 10px;

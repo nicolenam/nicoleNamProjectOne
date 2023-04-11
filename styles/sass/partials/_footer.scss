@@ -127,6 +127,10 @@
 
     &__column {
 
+      .show{
+        display: none;
+      }
+
       span{
         display: inline;
         padding-left: 10px;

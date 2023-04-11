@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //5) Accordion style footer
 
     const plusIcons = document.querySelectorAll('.fa-plus');
-    const minusIcon = document.querySelector('.fa-minus');
+    const minusIcons = document.querySelectorAll('.fa-minus');
     const accordionElement = document.querySelectorAll('.accordion');
 
     //when plusIcon is clicked, toggle .contact and .profile and disply minusIcon
@@ -190,16 +190,32 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.toggle(className);
     }
 
-    console.log(plusIcons);
     plusIcons.forEach((plusIcon, index) =>{
        
         plusIcon.addEventListener('click', ()=>{
             
-            toggleClass(accordionElement[index], 'accordion')
+            toggleClass(accordionElement[index], 'accordion');
+            toggleClass(minusIcons[index].parentElement, 'show');
+            toggleClass(plusIcon.parentElement, 'show');
       
         })
 
     });
+
+    minusIcons.forEach((minusIcon, index) =>{
+       
+        minusIcon.addEventListener('click', ()=>{
+            
+            toggleClass(accordionElement[index], 'accordion');
+            toggleClass(plusIcons[index].parentElement, 'show');
+            toggleClass(minusIcon.parentElement, 'show');
+      
+        })
+
+    });
+
+
+
 
 
 
