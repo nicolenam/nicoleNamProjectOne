@@ -178,9 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    //5) filter featured section sale new regular 
+    //5) Accordion style footer
 
-  
+    const plusIcons = document.querySelectorAll('.fa-plus');
+    const minusIcon = document.querySelector('.fa-minus');
+    const accordionElement = document.querySelectorAll('.accordion');
+
+    //when plusIcon is clicked, toggle .contact and .profile and disply minusIcon
+
+    const toggleClass = (element, className)=>{
+        element.classList.toggle(className);
+    }
+
+    console.log(plusIcons);
+    plusIcons.forEach((plusIcon, index) =>{
+       
+        plusIcon.addEventListener('click', ()=>{
+            
+            toggleClass(accordionElement[index], 'accordion')
+      
+        })
+
+    });
 
 
 

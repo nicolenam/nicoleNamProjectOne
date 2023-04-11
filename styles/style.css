@@ -1016,10 +1016,7 @@ a {
   .footer--about {
     padding: 1rem 0;
   }
-  .contact ul {
-    display: none;
-  }
-  .profile ul {
+  .accordion ul {
     display: none;
   }
 }

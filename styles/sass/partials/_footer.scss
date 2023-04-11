@@ -115,49 +115,6 @@
 
 @media (max-width:650px){
 
-  // .footer {
-  //   text-align: center;
-  //   font-size: 1rem;
-
-  //   &__logo{
-  //     margin: 1rem auto;
-  //   }
-
-  //   &--about{
-  //     display: none;
-  //   }
-
-  //   &__column{
-  //     .social-channels{
-  //       display: none;
-  //     }
-  //     label{
-  //       font-size: .9rem;
-  //     }
-  //   }
-
-  //   &__container{
-  //     display: block;
-
-  //     .profile{
-  //       display: none;
-  //     }
-
-
-      
-  //     .hide-content{
-  //       display: none;
-  //     }
-
-  //   }
-
-  //   ul{
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-  //   }
-  // }
-
 .footer{
 
   &__container{
@@ -183,17 +140,13 @@
 
   }
 
-  .contact{
+  .accordion{
     ul{
       display: none;
     }
   }
 
-  .profile{
-    ul{
-      display: none;
-    }
-  }
+
 
   
 }
