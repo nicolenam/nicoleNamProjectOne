@@ -35,8 +35,6 @@
       }
     }
 
- 
-
     p {
       color: v.$color-tertiary;
       margin: 3px 0;
@@ -45,6 +43,10 @@
         font-weight: v.$body-reg;
         font-size: 0.8rem;
       }
+    }
+
+    span{
+      display: none;
     }
 
     .icons {
@@ -113,48 +115,45 @@
 
 @media (max-width:650px){
 
-  .footer {
-    text-align: center;
-    font-size: 1rem;
+.footer{
 
-    &__logo{
-      margin: 1rem auto;
+  &__container{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      -webkit-gap: 20px;
+      -moz-gap: 20px;
+    }
+
+    &__column {
+
+      .show{
+        display: none;
+      }
+
+      span{
+        display: inline;
+        padding-left: 10px;
+        cursor: pointer;
+      }
     }
 
     &--about{
+      padding: 1rem 0;
+     }
+
+  }
+
+  .accordion{
+    ul{
       display: none;
     }
-
-    &__column{
-      .social-channels{
-        display: none;
-      }
-      label{
-        font-size: .9rem;
-      }
-    }
-
-    &__container{
-      display: block;
-
-      .profile{
-        display: none;
-      }
-
-
-      
-      .hide-content{
-        display: none;
-      }
-
-    }
-
-    ul{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   }
+
+
+
+  
 }
+
 
 

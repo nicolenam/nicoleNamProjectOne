@@ -1,0 +1,96 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+.modal {
+  @include m.modal;
+
+  h3 {
+    padding: 1rem 0;
+    font-weight: v.$body-bold;
+  }
+
+  i {
+    @include m.modal-exit;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 3rem auto 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .modal__submit {
+    background-color: v.$color-tertiary;
+    font-family: v.$font-main;
+    padding: 10px 35px;
+    border: 1px solid v.$color-primary;
+    font-size: 0.7rem;
+    width: auto;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: v.$color-primary;
+      color: v.$color-tertiary;
+    }
+  }
+
+  &--action {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      cursor: pointer;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(v.$color-secondary, 0.4);
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+//STOPS THE SCROLL WHEN MODAL IS OPEN
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.modal--close {
+  display: none;
+}
+
+// MEDIA QUERY STARTS HERE
+@media (max-width: 700px) {
+  .modal {
+    &__content {
+      p {
+        display: none;
+      }
+    }
+    &__form {
+      margin: 1rem auto 0;
+    }
+
+    p {
+      display: none;
+    }
+    .modal__submit {
+      width: 100%;
+    }
+  }
+}

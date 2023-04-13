@@ -66,3 +66,23 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
+@mixin modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    background-color: v.$color-tertiary;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px rgba(v.$color-secondary, .4);
+    z-index: 300;
+    min-width: 315px;
+    max-width: 500px;
+    padding: 3rem;
+}
+
+@mixin modal-exit{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
