@@ -7,21 +7,54 @@ const dbRef = ref(database);
 const productRef = ref(database, '/products');
 
 
-// onValue(productRef, (data)=>{
-
-// console.log(data.val());
-
-// });
-
 get(productRef).then((data)=>{
 
     const products = data.val();
 
-    for(let product in products){
-        console.log(product);
-    }
+    const featuredGrid = document.querySelector('.featured__grid');
 
-})
+    for(let product in products){
+
+        console.log(products[product])
+
+        const imgUrl = products[product].url;
+        const price = products[product].price;
+        const productName = products[product].name;
+
+
+        const gridProduct = document.querySelector('.featured__grid__product');
+
+        gridProduct.innerHTML = `
+
+            <a>
+                <img
+                class="product__img"
+                src=${imgUrl}
+                />
+            </a>
+
+            <div class="product">
+                <div class="product__container">
+                    <div>
+                        <p class="product__name">${productName}</p>
+                        <div class="product__price">
+                        <p>$ ${price}</p>
+                        </div>
+                    </div>
+                    <img
+                    src="./assets/icons/shopping-cart-black-icon.png"
+                    alt="shopping cart icon"/>
+                </div>
+            </div>
+        
+        `
+
+        featuredGrid.append(gridProduct);
+
+    };
+
+});
+
 
 
 
