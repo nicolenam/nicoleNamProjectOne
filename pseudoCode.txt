@@ -1,0 +1,19 @@
+//Step 1: set up firebase
+//Step 2: get data onto firebase  
+//Step 3: get data FROM firebase
+//Step 4: filter data to remove out of stock and no image products
+//Step 5: display products on the page
+
+
+
+//come up with the json 
+
+"products" : {
+
+    "Nieonvlakseu1239": {
+        name: '',
+        price: ,
+        url: ''
+    }
+}
+

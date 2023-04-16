@@ -1,3 +1,38 @@
+import app from './firebaseConfig.js';
+import { getDatabase, ref, push, onValue, get } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"
+
+
+const database = getDatabase(app);
+const dbRef = ref(database);
+const productRef = ref(database, '/products');
+
+
+// onValue(productRef, (data)=>{
+
+// console.log(data.val());
+
+// });
+
+get(productRef).then((data)=>{
+
+    const products = data.val();
+
+    for(let product in products){
+        console.log(product);
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 //codes below run when all the content is loaded first
 
@@ -32,36 +67,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 2) NEWSLETER SIGN UP MODAL
-    const body = document.querySelector('body');
-    const overlay = document.querySelector('.overlay');
-    const modal = document.querySelector('.modal');
-    const exitTop = document.querySelector('.modal--exit');
-    const exitBottom = document.querySelector('.modal--action p');
-    const form = document.querySelector('form');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
+    // const body = document.querySelector('body');
+    // const overlay = document.querySelector('.overlay');
+    // const modal = document.querySelector('.modal');
+    // const exitTop = document.querySelector('.modal--exit');
+    // const exitBottom = document.querySelector('.modal--action p');
+    // const form = document.querySelector('form');
+    // const nameInput = document.getElementById('name');
+    // const emailInput = document.getElementById('email');
 
-    // disable scroll initially for modal + overlay styles  
-    window.onload = () =>{
-        body.className = 'no-scroll';
-    }
+    // // disable scroll initially for modal + overlay styles  
+    // window.onload = () =>{
+    //     body.className = 'no-scroll';
+    // }
 
-    const closeModal = () =>{
-        modal.className = 'modal--close';
-        overlay.classList.toggle('modal--close');
-        body.className = ''; 
-        nameInput.value = '';
-        emailInput.value = '';
-    }
+    // const closeModal = () =>{
+    //     modal.className = 'modal--close';
+    //     overlay.classList.toggle('modal--close');
+    //     body.className = ''; 
+    //     nameInput.value = '';
+    //     emailInput.value = '';
+    // }
 
-    // call 'closeModal' function when click is detected
-    exitTop.addEventListener('click', closeModal);
-    exitBottom.addEventListener('click', closeModal);
+    // // call 'closeModal' function when click is detected
+    // exitTop.addEventListener('click', closeModal);
+    // exitBottom.addEventListener('click', closeModal);
 
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        closeModal();
-    });
+    // form.addEventListener('submit', function(e){
+    //     e.preventDefault();
+    //     closeModal();
+    // });
     
     
     // 3) HAMBURGER MENU 
