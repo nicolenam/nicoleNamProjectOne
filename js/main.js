@@ -50,12 +50,37 @@ get(productRef).then((data)=>{
         `
 
         featuredGrid.append(gridProduct);
+        addToShoppingCart();
 
     };
 
 });
 
 
+const addToShoppingCart = ()=>{
+
+    const bag = document.querySelectorAll('.product__container img');
+    console.log(bag);
+    const displayNum = document.querySelector('.nav__mobile p');
+    let numOfItems = 0;
+    let addNumber = 0;
+
+
+    for(let i = 0; i < bag.length; i++){
+
+        bag[i].addEventListener('click', function(){
+             console.log(addNumber);
+
+        numOfItems++;
+        const totalNumber = numOfItems + addNumber;
+
+        displayNum.innerHTML = totalNumber;
+     
+        }); 
+
+     }
+
+};
 
 
 
@@ -73,30 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     //this is a fix for modal showing anywhere on page after a refresh
 
-    // 1) ADD ITEMS TO SHOPPING BAG
-    const bag = document.querySelectorAll('.product__container img');
-    const displayNum = document.querySelector('.nav__mobile p');
-    let numOfItems = 0;
-    let addNumber = 0;
-
-    //click any bag in Featured sale section to increment number in numOfItems  
-
-        for(let i = 0; i < bag.length; i++){
-
-            //added click event to all the bags
-            bag[i].addEventListener('click', function(){
-                console.log(addNumber);
-
-            //for each click event: increment numOfItems
-            numOfItems++;
-            const totalNumber = numOfItems + addNumber;
-
-            //append the numOfItems to displayNum
-            displayNum.innerHTML = totalNumber;
-        
-            }); 
-
-        }
+   
 
 
     // 2) NEWSLETER SIGN UP MODAL
