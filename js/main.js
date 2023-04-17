@@ -6,11 +6,9 @@ const database = getDatabase(app);
 const dbRef = ref(database);
 const productRef = ref(database, '/products');
 
-
 get(productRef).then((data)=>{
 
     const products = data.val();
-
     const featuredGrid = document.querySelector('.featured__grid');
 
     for(let product in products){
@@ -22,7 +20,8 @@ get(productRef).then((data)=>{
         const productName = products[product].name;
 
 
-        const gridProduct = document.querySelector('.featured__grid__product');
+        const gridProduct = document.createElement('div');
+        gridProduct.classList.add('.featured__grid__product')
 
         gridProduct.innerHTML = `
 
@@ -60,7 +59,6 @@ get(productRef).then((data)=>{
 const addToShoppingCart = ()=>{
 
     const bag = document.querySelectorAll('.product__container img');
-    console.log(bag);
     const displayNum = document.querySelector('.nav__mobile p');
     let numOfItems = 0;
     let addNumber = 0;
@@ -69,16 +67,17 @@ const addToShoppingCart = ()=>{
     for(let i = 0; i < bag.length; i++){
 
         bag[i].addEventListener('click', function(){
-             console.log(addNumber);
 
-        numOfItems++;
-        const totalNumber = numOfItems + addNumber;
+            numOfItems++;
 
-        displayNum.innerHTML = totalNumber;
+            console.log(numOfItems);
+            console.log(addNumber);
+            const totalNumber = numOfItems + addNumber;
+            displayNum.innerHTML = totalNumber;
      
         }); 
 
-     }
+    }
 
 };
 
