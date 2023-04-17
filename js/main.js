@@ -1,10 +1,11 @@
 import app from './firebaseConfig.js';
-import { getDatabase, ref, push, onValue, get } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"
+import { getDatabase, ref, push, get, update, onValue, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"
 
 
 const database = getDatabase(app);
 const dbRef = ref(database);
 const productRef = ref(database, '/products');
+const amountRef =  ref(database, '/products/-NT7B9UiH0kSGd2ZijIY/amountInCart');
 
 get(productRef).then((data)=>{
 
@@ -12,8 +13,6 @@ get(productRef).then((data)=>{
     const featuredGrid = document.querySelector('.featured__grid');
 
     for(let product in products){
-
-        console.log(products[product])
 
         const imgUrl = products[product].url;
         const price = products[product].price;
@@ -49,37 +48,49 @@ get(productRef).then((data)=>{
         `
 
         featuredGrid.append(gridProduct);
-        addToShoppingCart();
+        // addToShoppingCart();
 
     };
+
+
 
 });
 
 
-const addToShoppingCart = ()=>{
-
-    const bag = document.querySelectorAll('.product__container img');
-    const displayNum = document.querySelector('.nav__mobile p');
-    let numOfItems = 0;
-    let addNumber = 0;
 
 
-    for(let i = 0; i < bag.length; i++){
 
-        bag[i].addEventListener('click', function(){
 
-            numOfItems++;
 
-            console.log(numOfItems);
-            console.log(addNumber);
-            const totalNumber = numOfItems + addNumber;
-            displayNum.innerHTML = totalNumber;
+//add an event listener to the product container image
+//figure out which product button this is in the firebase using the unique key
+//then add number count in the firebase
+
+
+// const addToShoppingCart = ()=>{
+
+//     const bag = document.querySelectorAll('.product__container img');
+//     const displayNum = document.querySelector('.nav__mobile p');
+//     let numOfItems = 0;
+//     let addNumber = 0;
+
+
+//     for(let i = 0; i < bag.length; i++){
+
+//         bag[i].addEventListener('click', function(){
+
+//             numOfItems++;
+
+//             console.log(numOfItems);
+//             console.log(addNumber);
+//             const totalNumber = numOfItems + addNumber;
+//             displayNum.innerHTML = totalNumber;
      
-        }); 
+//         }); 
 
-    }
+//     }
 
-};
+// };
 
 
 
